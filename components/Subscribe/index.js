@@ -15,7 +15,7 @@ const Subscribe = () => {
                     <div className="col-lg-6 col-md-6">
                         <div className="subscribe-from subscribe-from-style-2"> 
                             <form className="newsletter-form" data-toggle="validator">
-                                <input type="email" className="form-control" placeholder="Your Email" name="EMAIL" required autocomplete="off" />
+                                <input type="email" className="form-control" placeholder="Your Email" name="EMAIL" required autoComplete="off" />
                     
                                 <button className="default-btn btn-style-2" type="submit">
                                     Subscribe 

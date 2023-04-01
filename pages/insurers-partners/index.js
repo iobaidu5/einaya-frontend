@@ -205,17 +205,17 @@ const InsurersPartners = () => {
                 <ul>
                   <li>
                     <a href="categories.html">
-                      Car Insurance <i class='bx bx-right-arrow-alt'></i>
+                      Car Insurance <i className='bx bx-right-arrow-alt'></i>
                     </a>
                   </li>
                   <li>
                     <a href="categories.html">
-                      Home Insurance <i class='bx bx-right-arrow-alt'></i>
+                      Home Insurance <i className='bx bx-right-arrow-alt'></i>
                     </a>
                   </li>
                   <li>
                     <a href="categories.html">
-                      Health Insurance <i class='bx bx-right-arrow-alt'></i>
+                      Health Insurance <i className='bx bx-right-arrow-alt'></i>
                     </a>
                   </li>
                 </ul>
@@ -249,7 +249,7 @@ const InsurersPartners = () => {
             <div className="col-lg-6 col-md-6">
                         <div className="subscribe-from subscribe-from-style-2"> 
                             <form className="newsletter-form" data-toggle="validator">
-                                <input type="email" className="form-control" placeholder="Your Email" name="EMAIL" required autocomplete="off" />
+                                <input type="email" className="form-control" placeholder="Your Email" name="EMAIL" required autoComplete="off" />
                     
                                 <button className="default-btn btn-style-2" type="submit">
                                 Get Started 

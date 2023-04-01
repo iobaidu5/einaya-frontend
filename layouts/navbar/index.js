@@ -11,7 +11,6 @@ export const Navbar = () => {
   const [search, showSearch] = useState(false);
 
   useEffect(() => {
-
     $(window).on("scroll", function () {
       if ($(this).scrollTop() > 100) {
         $(".navbar-area").addClass("is-sticky");
@@ -22,15 +21,14 @@ export const Navbar = () => {
   });
 
   const handleSearch = () => {
-  //   $('.searchbtn').on('click', function() {
-  //     $('.search-area').toggleClass('active');
-  // });
-  // $('.close-searchbox').on('click', function() {
-  //     $('.search-area').removeClass('active');
-  // });
+    //   $('.searchbtn').on('click', function() {
+    //     $('.search-area').toggleClass('active');
+    // });
+    // $('.close-searchbox').on('click', function() {
+    //     $('.search-area').removeClass('active');
+    // });
     showSearch(!search);
   };
-
 
   return (
     <>
@@ -40,30 +38,30 @@ export const Navbar = () => {
             <div className="row justify-content-between align-items-center">
               <div className="col-lg-6 col-sm-3 col-md-6">
                 <div className="header-left-bar-text">
-                        <div className="top_left">
-            <div className="top_left-languages">
-              <p className="top_left-languages--p active">English</p>
-              <p className="top_left-languages--p">عربي</p>
-            </div>
-            <div>
-                  <ul className="list-inline">
-                    <li>
-                      <a href="https://www.facebook.com/" target="_blank">
-                        <i className="bx bxl-facebook"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://twitter.com/" target="_blank">
-                        <i className="bx bxl-twitter"></i>
-                      </a>
-                    </li>
-                    <li>
-                      <a href="https://www.linkedin.com/" target="_blank">
-                        <i className="bx bxl-linkedin"></i>
-                      </a>
-                    </li>
-                  </ul>
-                  </div>
+                  <div className="top_left">
+                    <div className="top_left-languages">
+                      <p className="top_left-languages--p active">English</p>
+                      <p className="top_left-languages--p">عربي</p>
+                    </div>
+                    <div>
+                      <ul className="list-inline">
+                        <li>
+                          <a href="https://www.facebook.com/" target="_blank">
+                            <i className="bx bxl-facebook"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://twitter.com/" target="_blank">
+                            <i className="bx bxl-twitter"></i>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://www.linkedin.com/" target="_blank">
+                            <i className="bx bxl-linkedin"></i>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -170,7 +168,7 @@ export const Navbar = () => {
                   <div className="others-options d-flex align-items-center">
                     <div className="option-item">
                       <button className="searchbtn" type="button">
-                        <i class="bx bx-search"></i>
+                        <i className="bx bx-search"></i>
                       </button>
                     </div>
                     <div className="option-item">

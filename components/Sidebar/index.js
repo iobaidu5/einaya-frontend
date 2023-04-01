@@ -29,7 +29,7 @@ const SideBar = () => {
       <div id="side-menu" className="main-side-nav">
         <a id="close-menu" className="menuCloseButton" onClick={closeSideNav}>
           <span id="side-menu-close-text">
-            <i class="bx bx-x"></i>
+            <i className="bx bx-x"></i>
           </span>
           <span className="menu-Close "></span>
         </a>
@@ -37,8 +37,8 @@ const SideBar = () => {
           <div className="sidebar_content">
             <div className="sidebar_content-form">
               <div className="sidebar_content-input">
-                <div class="right-inner-addon input-container">
-                  <i class="bx bx-search-alt-2 right-inner-addon-icon"></i>
+                <div className="right-inner-addon input-container">
+                  <i className="bx bx-search-alt-2 right-inner-addon-icon"></i>
                   <input
                     type="text"
                     name="search-doctor"
@@ -55,8 +55,8 @@ const SideBar = () => {
                 </div>
               </div>
               <div className="sidebar_content-input">
-                <div class="right-inner-addon input-container">
-                  <i class="bx bx-current-location right-inner-addon-icon"></i>
+                <div className="right-inner-addon input-container">
+                  <i className="bx bx-current-location right-inner-addon-icon"></i>
                   <input
                     type="text"
                     name="search-location"

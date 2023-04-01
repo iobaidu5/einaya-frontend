@@ -24,17 +24,17 @@ export const Footer = () => {
                 <ul className="follow-list">
                   <li>
                     <Link href="https://www.linkedin.com/" passHref>
-                      <i class="fab fa-instagram footer-icon"></i>
+                      <i className="fab fa-instagram footer-icon"></i>
                     </Link>
                   </li>
                   <li>
                     <Link href="https://www.facebook.com/" passHref>
-                      <i class="fab fa-facebook-f footer-icon"></i>
+                      <i className="fab fa-facebook-f footer-icon"></i>
                     </Link>
                   </li>
                   <li>
                     <Link href="https://twitter.com/" passHref>
-                      <i class="fab fa-twitter footer-icon"></i>
+                      <i className="fab fa-twitter footer-icon"></i>
                     </Link>
                   </li>
                 </ul>

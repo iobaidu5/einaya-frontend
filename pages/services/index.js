@@ -5,9 +5,9 @@ import Link from "next/link";
 const Services = () => {
   return (
     <>
-            <div class="page-banner-area">
-            <div class="container">
-                <div class="single-page-banner-content">
+            <div className="page-banner-area">
+            <div className="container">
+                <div className="single-page-banner-content">
                     <h1>Services</h1>
                 </div>
             </div>

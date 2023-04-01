@@ -43,9 +43,9 @@ const Menu = () => {
     <>
                   <div className="appointment_content">
                 <div className="row">
-                  {appointments.map((appointment) => {
+                  {appointments.map((appointment, index) => {
                     return (
-                      <div className="col-md-4">
+                      <div className="col-md-4" key={index}>
                         <div className="appointment_box">
                           <div className="appointment_box-icon">
                             <img
