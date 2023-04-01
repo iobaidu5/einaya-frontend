@@ -45,10 +45,11 @@ html {
 
 body { 
     font-size: var(--fontSize);
-    font-weight: 400;
+    font-weight: 500;
     font-family: var(--fontFamily);
     color: var(--paragraphColor);
     transition: var(--transition);
+    overflow-x: hidden !important;
 } 
 
 
@@ -144,6 +145,10 @@ body {
                 }
             }
         }
+    }
+
+    @media only screen and (max-width: 767px) {
+        display: none !important;
     }
 }
 .header-left-bar-text {
@@ -496,7 +501,7 @@ Start NavBer Css
                             font-family: var(--fontFamily);
                             color: var(--paragraphColor);
                             font-size: var(--fontSize);
-                            font-weight: 400;
+                            font-weight: 500;
                             
                             i {
                                 margin: 0;
@@ -1175,7 +1180,7 @@ End NavBer Responsive Css
             position: absolute;
             right: 52px;
             bottom: 0;
-            font-weight: 400;
+            font-weight: 500;
     
             .inner {
                 display: flex;
@@ -1283,7 +1288,7 @@ End NavBer Responsive Css
             &--p {
                 font-family: "Jost";
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 16px;
                 line-height: 10px;
                 color: #555555;
@@ -1331,7 +1336,7 @@ End NavBer Responsive Css
             &--a {
                 font-family: "Jost";
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 16px;
                 line-height: 10px;
                 color: #555555;
@@ -1478,7 +1483,7 @@ End NavBer Responsive Css
     padding: 20px 0px;
     outline: 0;
     font-family: "Jost";
-    font-weight: 400;
+    font-weight: 500;
     color: #fff;
     font-size: 16px;
 }
@@ -1678,7 +1683,7 @@ Start Section Title
     .top-title {
         color: var(--mainColor);
         font-size: 20px;
-        font-weight: 400;
+        font-weight: 500;
         font-family: var(--fontFamily);
         display: inline-block;
         margin-bottom: 20px;
@@ -1798,7 +1803,7 @@ Search Form Area
             padding: 20px 0px;
             outline: 0;
             font-family: var(--fontFamily);
-            font-weight: 400;
+            font-weight: 500;
             color: var(--whiteColor);
             font-size: 16px;
             &::placeholder {
@@ -2443,7 +2448,7 @@ Start My Account Area
         .form-control {
             background-color: #F7F7F7;
             padding: 15px 20px;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 16px;
             border: 1px solid #F7F7F7;
             border-radius: 0px;
@@ -2678,7 +2683,7 @@ End Blog Page Area
             border-radius: 0px;
             outline: none;
             padding: 15px 30px 15px 18px;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 16px;
             color: var(--paragraphColor);
             transition: var(--transition);
@@ -2741,7 +2746,7 @@ End Blog Page Area
                 margin-bottom: 0;
             }
             a {
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 16px;
                 line-height: 10px;
                 position: relative;
@@ -2847,7 +2852,7 @@ End Blog Page Area
             }
         }
         span {
-            font-weight: 400;
+            font-weight: 500;
             font-size: 16px;
             color: var(--mainColor);
             display: inline-block;
@@ -2891,7 +2896,7 @@ End Blog Page Area
             a {
                 padding: 15px;
                 font-family: var(--bodyFontFamily);
-                font-weight: 400;
+                font-weight: 500;
                 font-size: 16px;
                 color: #888888;
                 text-align: center;
@@ -2937,7 +2942,7 @@ Start Contact Us Area
         }
         .list-unstyled {
             font-family: var(--fontFamily);
-            font-weight: 400;
+            font-weight: 500;
             font-size: 16px;
             color: var(--mainColor);
         }
@@ -3083,7 +3088,7 @@ Start Contact Us Area
     }
     a {
         font-size: 16px;
-        font-weight: 400;
+        font-weight: 500;
         transition: var(--transition);
         color: var(--paragraphColor);
         line-height: 26px;
@@ -6828,7 +6833,7 @@ Start Footer Responsive Css
     border-radius: 30px;
     font-family: "Jost";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 23px;
     color: #777777;
@@ -6865,7 +6870,7 @@ Start Footer Responsive Css
     border-radius: 30px;
     font-family: "Jost";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 23px;
     color: #777777;
@@ -6900,7 +6905,7 @@ Start Footer Responsive Css
     border-radius: 30px;
     font-family: "Jost";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px;
     line-height: 23px;
     color: #777777;
@@ -6970,7 +6975,7 @@ Start Footer Responsive Css
 .banner-para{
     font-family: "Jost";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 26px;
     line-height: 34px;
     text-align: justify;
@@ -6981,7 +6986,7 @@ Start Footer Responsive Css
 .para{
     font-family: "Jost";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 26px;
     line-height: 34px;
     text-align: justify;
@@ -7023,7 +7028,7 @@ Start Footer Responsive Css
 .footer-link{
     font-family: "Jost";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 16px !important;
     line-height: 30px !important;
     color: #555555 !important;
@@ -7172,7 +7177,7 @@ Start Footer Responsive Css
         &-p{
             font-family: "Jost";
             font-style: normal;
-            font-weight: 400;
+            font-weight: 500;
             font-size: 16px;
             line-height: 30px;
             display: flex;
