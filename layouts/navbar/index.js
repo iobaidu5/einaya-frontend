@@ -74,8 +74,8 @@ export const Navbar = () => {
                     </li>
                     <li className="d-inline">
                       <img src="./assets/images/email.svg" alt="Email" />
-                      <a href="mailto:info@inonthemes.com">
-                        Info@inonthemes.com
+                      <a href="mailto:Info@einaya.com">
+                        Info@einaya.com
                       </a>
                     </li>
                   </ul>
