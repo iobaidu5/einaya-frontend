@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react"
 
 const InsurersPartners = () => {
   return (
@@ -24,7 +24,7 @@ const InsurersPartners = () => {
                 </div>
                 <h2 className="services-text">Work with us</h2>
                 <p className="para">
-                We've been a trusted partner for over 2 decades, offering our partners and clients a relationship based on transparency and trust, and helping coordinate between healthcare services as per policy benefits provision.
+                We"ve been a trusted partner for over 2 decades, offering our partners and clients a relationship based on transparency and trust, and helping coordinate between healthcare services as per policy benefits provision.
                 </p>
                 <div className="row">
                   <div className="col-lg-6 col-sm-6 col-md-6">
@@ -205,17 +205,17 @@ const InsurersPartners = () => {
                 <ul>
                   <li>
                     <a href="categories.html">
-                      Car Insurance <i className='bx bx-right-arrow-alt'></i>
+                      Car Insurance <i className="bx bx-right-arrow-alt"></i>
                     </a>
                   </li>
                   <li>
                     <a href="categories.html">
-                      Home Insurance <i className='bx bx-right-arrow-alt'></i>
+                      Home Insurance <i className="bx bx-right-arrow-alt"></i>
                     </a>
                   </li>
                   <li>
                     <a href="categories.html">
-                      Health Insurance <i className='bx bx-right-arrow-alt'></i>
+                      Health Insurance <i className="bx bx-right-arrow-alt"></i>
                     </a>
                   </li>
                 </ul>

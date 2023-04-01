@@ -1,6 +1,6 @@
 
 const debounce = (func, wait, immediate) => {
-    // 'private' variable for instance
+    // "private" variable for instance
     // The returned function will be able to reference this due to closure.
     // Each call to the returned function will share this common timer.
     var timeout;
@@ -25,13 +25,13 @@ const debounce = (func, wait, immediate) => {
         timeout = setTimeout(function () {
 
             // Inside the timeout function, clear the timeout variable
-            // which will let the next execution run when in 'immediate' mode
+            // which will let the next execution run when in "immediate" mode
             timeout = null;
 
             // Check if the function already ran with the immediate flag
             if (!immediate) {
                 // Call the original function with apply
-                // apply lets you define the 'this' object as well as the arguments 
+                // apply lets you define the "this" object as well as the arguments 
                 //    (both captured before setTimeout)
                 func.apply(context, args);
             }

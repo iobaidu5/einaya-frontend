@@ -2,18 +2,18 @@ import { debounce } from "./debounce";
 import { throttle } from "./throttle";
 import { postAPI } from "/httpServices";
 
-const localStorage = typeof window !== 'undefined' ? window?.localStorage : null;
+const localStorage = typeof window !== "undefined" ? window?.localStorage : null;
 
 const timeStamps = () => { return Math.floor(new Date().getTime() / 1000) };
 
 const jwtParse = (query) => { //keys = ["exp", "sessionTime"]
     let access_token = localStorage?.getItem("_") ? JSON?.parse(atob(localStorage?.getItem("_")))?.access_token : null;
     if (access_token) {
-        var base64Url = access_token.split('.')[1];
-        var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-        var jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function (c) {
-            return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-        }).join(''));
+        var base64Url = access_token.split(".")[1];
+        var base64 = base64Url.replace(/-/g, "+").replace(/_/g, "/");
+        var jsonPayload = decodeURIComponent(window.atob(base64).split("").map(function (c) {
+            return "%" + ("00" + c.charCodeAt(0).toString(16)).slice(-2);
+        }).join(""));
         if (Array.isArray(query)) {
             let response;
             query.forEach((key) => {
@@ -28,7 +28,7 @@ const jwtParse = (query) => { //keys = ["exp", "sessionTime"]
 };
 
 const onDebounced = debounce(() => {
-    document.querySelector('#setOpenTrue')?.click();
+    document.querySelector("#setOpenTrue")?.click();
     // clearSession()
 }, 60000 * jwtParse("sessionTime"));
 

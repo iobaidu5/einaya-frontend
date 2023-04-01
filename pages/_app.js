@@ -34,7 +34,8 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
-        <Script
+      </Head>
+      <Script
           src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
           integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
           crossOrigin="anonymous"
@@ -44,6 +45,7 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
           integrity="sha512-xCjebs15sDDnxvHPWx8TbijKRr90758VQwBSlIEABqNGF2FkF5fzglDXNvv485csSqJ2EIN9Cc6/vAgys5GtNA=="
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
+          async
         ></script>
         <Script
           src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
@@ -59,6 +61,7 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
           integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
           crossOrigin="anonymous"
+          async
         ></script>
         <Script
           src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
@@ -71,7 +74,6 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         ></Script>
-      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>

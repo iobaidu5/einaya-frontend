@@ -2,7 +2,7 @@ import axios from "axios";
 import { verifyExpiry, getSession } from "/customHooks";
 // import { postAPI } from "./"
 // import { openMessage } from "components/notification/notification";
-// import { unauthorized } from './unauthorized'
+// import { unauthorized } from "./unauthorized"
 /*to check if same request in queue*/
 
 // const access_token = getSession("access_token");
@@ -39,13 +39,13 @@ axios.interceptors.request.use(
 //   return response
 // }, async function (error) {
 //   const originalRequest = error.config;
-//   console.log('testing called', error, originalRequest)
+//   console.log("testing called", error, originalRequest)
 //   if (error.response.status === 401 && originalRequest._retry !== true) {
 //     console.log("entered")
 //     originalRequest._retry = true;
 //     delete axios.defaults.headers.common["Authorization"];
 //     const access_token = await postAPI({ endPoint: "login/verifyToken", requestData: { refresh_token } });
-//     // axios.defaults.headers.common['Authorization'] = 'Bearer ' + access_token;
+//     // axios.defaults.headers.common["Authorization"] = "Bearer " + access_token;
 //     // return axiosApiInstance(originalRequest);
 //   }
 //   return Promise.reject(error);

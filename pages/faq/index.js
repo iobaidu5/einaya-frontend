@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from "react"
 import { useForm, Form } from "../../genericComponents";
 import Link from "next/link";
 
@@ -55,7 +55,7 @@ const FAQ = () => {
      <div className="page-banner-area portfolio-page-area">
             <div className="container">
                 <div className="single-page-banner-content">
-                    <h1>FAQ's</h1>
+                    <h1>FAQ"s</h1>
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@ const FAQ = () => {
                 <div className="row align-items-center">
                     <div className="col-lg-6">
                         <div className="faqs-img">
-                            <img className='faq-img--img' src="assets/images/faq-img-1.webp" alt="faqs" />
+                            <img className="faq-img--img" src="assets/images/faq-img-1.webp" alt="faqs" />
                             <div className="faqs-img-2">
                                 <img src="assets/images/faq-img-2.webp" alt="faqs" />
                             </div>

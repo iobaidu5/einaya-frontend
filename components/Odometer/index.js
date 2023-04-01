@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react"
 var $ = require("jquery");
 if (typeof window !== "undefined") {
   window.$ = window.jQuery = require("jquery");
@@ -7,7 +7,7 @@ if (typeof window !== "undefined") {
 const Odometer = () => {
 
     useEffect(() => {
-        // $('.odometer').appear(function(e) {
+        // $(".odometer").appear(function(e) {
         //     var odo = $(".odometer");
         //     odo.each(function() {
         //         var countNumber = $(this).attr("data-count");

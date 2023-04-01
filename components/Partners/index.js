@@ -30,7 +30,7 @@ const Partners = () => {
               Happy Customers Including
             </div>
             <div className="panther-slider-two">
-              <OwlCarousel className='owl-theme' loop margin={10} nav items={5} dots={false} autoplay={true} arrow={false} >
+              <OwlCarousel className="owl-theme" loop margin={10} nav items={5} dots={false} autoplay={true} arrow={false} >
                 <div className="panther-logo">
                   <img
                     src="./assets/images/pantner/pantner-logo-1.svg"

@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap");
 
 * {
     margin: 0;
@@ -33,7 +33,7 @@
 }
 
 html {
-    font-family: 'Jost', sans-serif;
+    font-family: "Jost", sans-serif;
     // font-size: 62.5% !important; // 10px = 10px, 10px/16px = 62.5%
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     scroll-behavior: smooth;
@@ -155,7 +155,7 @@ body {
             display: inline-block;
             margin-right: 12px;
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.39);
                 width: 1px;
@@ -198,7 +198,7 @@ body {
                 transform: translateY(-50%);
             }
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 background-color: rgba(255, 255, 255, 0.67);
                 width: 1px;
@@ -271,7 +271,7 @@ Start NavBer Css
             height: 70%;
             z-index: -1;
             background-color: #009C9D;
-            content: '';
+            content: "";
             left: 0;
             top: 0;
             right: 0;
@@ -306,7 +306,7 @@ Start NavBer Css
             height: 69%;
             z-index: -1;
             background-color: #D1E3E4;
-            content: '';
+            content: "";
             left: 0;
             top: 0;
             right: 0;
@@ -854,7 +854,7 @@ Start NavBer Responsive Css
         width: 90%;;
     }
     .mean-container .mean-nav ul li a {
-        font-family: 'Jost', sans-serif !important;
+        font-family: "Jost", sans-serif !important;
         font-size: 14px !important;
     }
     .main-responsive-menu {
@@ -1281,7 +1281,7 @@ End NavBer Responsive Css
             gap: 10px;
 
             &--p {
-                font-family: 'Jost';
+                font-family: "Jost";
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
@@ -1329,7 +1329,7 @@ End NavBer Responsive Css
             }
 
             &--a {
-                font-family: 'Jost';
+                font-family: "Jost";
                 font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
@@ -1477,7 +1477,7 @@ End NavBer Responsive Css
     border-bottom: 1px solid var(--color-primary-light);
     padding: 20px 0px;
     outline: 0;
-    font-family: 'Jost';
+    font-family: "Jost";
     font-weight: 400;
     color: #fff;
     font-size: 16px;
@@ -1510,7 +1510,7 @@ End NavBer Responsive Css
     transition: var(--transition);
     z-index: 1;
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 100%;
         height: 100%;
@@ -1622,7 +1622,7 @@ Preloader
         }
     }
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         top: 0;
@@ -1633,7 +1633,7 @@ Preloader
         transition: var(--transition);
     }
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         top: 0;
@@ -1710,7 +1710,7 @@ Start Default Btn
     transition: var(--transition);
     z-index: 1;
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 100%;
         height: 100%;
@@ -1919,7 +1919,7 @@ Start Banner Area
                         background-color: #F0F8FA;
                         border-radius: 100%;
                         position: absolute;
-                        content: '';
+                        content: "";
                         left: -3px;
                         right: 0;
                         top: 46%;
@@ -2392,7 +2392,7 @@ Start Terms & Conditions Area And Privacy Policy Area
         padding-left: 25px;
         position: relative;
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             background-color: var(--oppositeColor);
             width: 15px;
@@ -2521,7 +2521,7 @@ start Page Banner Area
     background-repeat: no-repeat;
     margin-top: -33px;
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 100%;
         height: 100%;
@@ -2552,7 +2552,7 @@ start Page Banner Area
     background-repeat: no-repeat;
     margin-top: -33px;
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 100%;
         height: 100%;
@@ -2591,7 +2591,7 @@ start Page Banner Area
             margin-right: 15px;
             position: relative;
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 1.8px;
                 height: 15px;
@@ -3109,7 +3109,7 @@ Start Panther Area
     padding-bottom: 85px;
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         height: 100%;
         width: 745px;
@@ -3483,7 +3483,7 @@ Start Our Services Area
     position: relative;
     z-index: 1;
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         background-color: #2CB2B3;
         width: 100%;
@@ -3669,7 +3669,7 @@ Start Services Two Area
                 transition: var(--transition);
             }
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 100%;
                 height: 0;
@@ -3697,7 +3697,7 @@ Start Services Two Area
                 z-index: 1;
                 overflow: hidden;
                 &::after {
-                    content: '';
+                    content: "";
                     position: absolute;
                     width: 10px;
                     height: 100%;
@@ -3816,7 +3816,7 @@ Start services Three Area
         }
     }
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 100%;
         height: 0;
@@ -4103,7 +4103,7 @@ Start Free Quote Area
             }
             &::after {
                 background: rgba(44, 178, 179, 0.12);
-                content: '';
+                content: "";
                 position: absolute;
                 left: 0;
                 right: 0;
@@ -4145,7 +4145,7 @@ Start Free Quote Area
         transform: translateY(-50%);
         transition: var(--transition);
         &::after {
-            content: '';
+            content: "";
             position: absolute;
             width: 112px;
             height: 112px;
@@ -4169,7 +4169,7 @@ Start Free Quote Area
             position: relative;
             transition: var(--transition);
             &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 96px;
                 height: 96px;
@@ -4181,7 +4181,7 @@ Start Free Quote Area
                 transition: var(--transition);
             }
             &::before {
-                content: '';
+                content: "";
                 position: absolute;
                 width: 112px;
                 height: 112px;
@@ -4221,7 +4221,7 @@ Start Free Quote Area
         background-color: rgba(44, 178, 179, 0.12);
         left: 0;
         right: 0;
-        content: '';
+        content: "";
         position: absolute;
         z-index: -1;
         top: 50%;
@@ -4282,7 +4282,7 @@ Start Free Quote Area
     transition: var(--transition);
     margin-bottom: 30px;
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 100%;
         height: 100%;
@@ -4342,7 +4342,7 @@ Start Free Quote Area
             background: linear-gradient(180deg, #2DC782 0%, #2CB8A6 100%);
             opacity: 0;
             visibility: hidden;
-            content: '';
+            content: "";
             position: absolute;
             width: 100%;
             height: 100%;
@@ -4399,7 +4399,7 @@ Start Odometer area
         }
     }
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         right: 0;
         top: 0;
@@ -4457,7 +4457,7 @@ Start Odometer area
         background-position: center center;
         background-repeat: no-repeat;
         position: absolute;
-        content: '';
+        content: "";
     }
     h2 {
         font-size: 110px;
@@ -5524,7 +5524,7 @@ Start Team Area
         border-radius: 20px;
     }
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         left: 0;
         right: 0;
@@ -5653,7 +5653,7 @@ Start Blog Area
     position: relative;
     z-index: 1;
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         background-color: #F8F8F8;
         width: 100%;
@@ -5878,7 +5878,7 @@ Start Subscribe Area
         }
     }
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         height: 100%;
         width: 900px;
@@ -5890,7 +5890,7 @@ Start Subscribe Area
         z-index: -1;
     }
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         height: 100%;
         width: 700px;
@@ -5991,7 +5991,7 @@ Start Subscribe Area
         bottom: 96px;
     }
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         width: 45%;
         height: 100%;
@@ -6003,7 +6003,7 @@ Start Subscribe Area
         z-index: -1;
     }
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         width: 54.5%;
         height: 100%;
@@ -6069,7 +6069,7 @@ Start Go Top CSS
         }
     }
     &::before {
-        content: '';
+        content: "";
         position: absolute;
         top: 0;
         left: 0;
@@ -6161,7 +6161,7 @@ Start Go Top CSS
         &-title{
 
             &--p{
-                font-family: 'Jost';
+                font-family: "Jost";
                 font-style: normal;
                 font-weight: 600;
                 font-size: 18px;
@@ -6777,7 +6777,7 @@ Start Footer Responsive Css
         &-content{
 
             &--title{
-                font-family: 'Jost';
+                font-family: "Jost";
                 font-style: normal;
                 font-weight: 700;
                 font-size: 24px;
@@ -6826,7 +6826,7 @@ Start Footer Responsive Css
     background: #F7F7F7;
     border: 1px solid #F7F7F7;
     border-radius: 30px;
-    font-family: 'Jost';
+    font-family: "Jost";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -6863,7 +6863,7 @@ Start Footer Responsive Css
     background: #F7F7F7;
     border: 1px solid #F7F7F7;
     border-radius: 30px;
-    font-family: 'Jost';
+    font-family: "Jost";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -6898,7 +6898,7 @@ Start Footer Responsive Css
     background: #fff;
     border: 1px solid #fff;
     border-radius: 30px;
-    font-family: 'Jost';
+    font-family: "Jost";
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -6968,7 +6968,7 @@ Start Footer Responsive Css
 }
 
 .banner-para{
-    font-family: 'Jost';
+    font-family: "Jost";
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
@@ -6979,7 +6979,7 @@ Start Footer Responsive Css
 }
 
 .para{
-    font-family: 'Jost';
+    font-family: "Jost";
     font-style: normal;
     font-weight: 400;
     font-size: 26px;
@@ -7021,7 +7021,7 @@ Start Footer Responsive Css
 }
 
 .footer-link{
-    font-family: 'Jost';
+    font-family: "Jost";
     font-style: normal;
     font-weight: 400;
     font-size: 16px !important;
@@ -7144,7 +7144,7 @@ Start Footer Responsive Css
         gap: "30px";
 
         &-title{
-            font-family: 'Jost';
+            font-family: "Jost";
             font-style: normal;
             font-weight: 700;
             font-size: 260px;
@@ -7157,7 +7157,7 @@ Start Footer Responsive Css
         }
 
         &-head{
-            font-family: 'Jost';
+            font-family: "Jost";
             font-style: normal;
             font-weight: 900;
             font-size: 30px;
@@ -7170,7 +7170,7 @@ Start Footer Responsive Css
         }
 
         &-p{
-            font-family: 'Jost';
+            font-family: "Jost";
             font-style: normal;
             font-weight: 400;
             font-size: 16px;
@@ -7194,7 +7194,7 @@ Start Footer Responsive Css
 .menuCloseButton
 {
     display: block;
-    font-family: 'Jost';
+    font-family: "Jost";
     font-size: 16px;
     padding: 100px;
     text-transform: uppercase;
@@ -7229,7 +7229,7 @@ Start Footer Responsive Css
     background-color: green($color: #000000);
     color: red;
     display: block;
-    font-family: 'Jost';
+    font-family: "Jost";
     background: transparent no-repeat right center scroll;
     display: inline-block;
     width: 36px;
@@ -7296,7 +7296,7 @@ Start Footer Responsive Css
 .mainMenu > li >a
 {
     padding: 10px 25px;
-    font-family: 'OpenSansLight', Arial, Helvetica, sans-serif;
+    font-family: "OpenSansLight", Arial, Helvetica, sans-serif;
     font-size:  16px;
     color: #fff;
 }
@@ -7426,7 +7426,7 @@ Start Ripple Animation
             padding: 30px 10px;
 
             &--h2{
-                font-family: 'Jost';
+                font-family: "Jost";
                 font-style: normal;
                 font-weight: 500;
                 font-size: 20px;

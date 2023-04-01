@@ -21,11 +21,11 @@ export const Navbar = () => {
   });
 
   const handleSearch = () => {
-    //   $('.searchbtn').on('click', function() {
-    //     $('.search-area').toggleClass('active');
+    //   $(".searchbtn").on("click", function() {
+    //     $(".search-area").toggleClass("active");
     // });
-    // $('.close-searchbox').on('click', function() {
-    //     $('.search-area').removeClass('active');
+    // $(".close-searchbox").on("click", function() {
+    //     $(".search-area").removeClass("active");
     // });
     showSearch(!search);
   };

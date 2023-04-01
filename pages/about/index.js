@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react"
 var $ = require("jquery");
 if (typeof window !== "undefined") {
   window.$ = window.jQuery = require("jquery");
@@ -6,9 +6,9 @@ if (typeof window !== "undefined") {
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
-import Odometer from '../../components/Odometer';
-import Team from '../../components/Team';
-import Testimonials from '../../components/Testimonials';
+import Odometer from "../../components/Odometer";
+import Team from "../../components/Team";
+import Testimonials from "../../components/Testimonials";
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });
@@ -17,16 +17,16 @@ const AboutUs = () => {
 
     useEffect(() => {
         const settings={
-            fill: '#51CB20',
-            background: 'transparent'
+            fill: "#51CB20",
+            background: "transparent"
         }
-        const sliders = document.querySelectorAll('.range-slider');
+        const sliders = document.querySelectorAll(".range-slider");
         Array.prototype.forEach.call(sliders,(slider)=>{
-            slider.querySelector('input').addEventListener('input', (event)=>{
-            slider.querySelector('span').innerHTML = event.target.value;
+            slider.querySelector("input").addEventListener("input", (event)=>{
+            slider.querySelector("span").innerHTML = event.target.value;
             applyFill(event.target);
             });
-            applyFill(slider.querySelector('input'));
+            applyFill(slider.querySelector("input"));
         });
         
         function applyFill(slider) {
