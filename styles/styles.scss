@@ -363,6 +363,13 @@ Start NavBer Css
         padding-left: 50px;
         padding-right: 50px;
         max-width: 1920px;
+
+        @media only screen and (max-width: 1200px) {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            width: 100%;
+            max-width: 100%;
+        }
     }
     &.main-navbar-two {
         padding: 0;
@@ -370,6 +377,12 @@ Start NavBer Css
             background: #FFFFFF;
             border-radius: 50px;
             padding: 18px 25px 18px 35px;
+
+            @media only screen and (max-width: 990px) {
+                border-radius: 0px !important;
+            }
+
+
             .others-options {
                 .option-item {
                     .default-btn {
@@ -424,6 +437,10 @@ Start NavBer Css
                 position: relative;
                 margin-left: 15px;
                 margin-right: 15px;
+
+                @media only screen and (max-width: 990px) {
+                    margin-left: 0px;
+                }
                 
                 .nav-link {
                     font-size: 17px;
@@ -436,6 +453,7 @@ Start NavBer Css
                     padding-bottom: 20px;
                     transition: var(--transition);
                     position: relative;
+                    white-space: nowrap;
 
                     i {
                         font-size: 18px;
@@ -753,7 +771,7 @@ End NavBer Css
 /* ---------------------------------------
 Start NavBer Responsive Css 
 -----------------------------------------*/ 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 990px) {
 
     .header-area {
         .container-fluid {
@@ -1087,7 +1105,7 @@ End NavBer Responsive Css
 // Mobile and iPad Navbar Responsive
 @media only screen and (max-width: 1199px) {
     .main-responsive-nav {
-        display: block;
+        display: none; // change
         .main-responsive-menu {
             position: relative;
             
@@ -1160,9 +1178,9 @@ End NavBer Responsive Css
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    .main-navbar {
-        display: none;
-    }
+    // .main-navbar {
+    //     display: none;
+    // }
     .others-option-for-responsive {
         display: block;
     }
@@ -1583,6 +1601,9 @@ img {
 }
 .pb-100 {
     padding-bottom: 100px;
+    @media only screen and (max-width: 600px) {
+        padding-bottom: 70px;
+    }
 }
 .pt-100 {
     padding-top: 100px;
@@ -1823,6 +1844,14 @@ Search Form Area
     max-width: 1400px;
     padding-left: 50px;
     padding-right: 50px;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        max-width: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+    
+    }
 }
 
 /* -------------------------------------
@@ -2096,6 +2125,10 @@ start Banner Two Area
     width: 100%;
     max-width: 100%;
     height: auto;
+    @media only screen and (max-width: 990px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
     .banner-two-shape {
         position: absolute;
         bottom: 37px;
@@ -2135,6 +2168,11 @@ start Banner Two Area
         line-height: 100px;
         font-weight: 800;
         margin-bottom: 10px;
+
+        @media only screen and (max-width: 768px) {
+            font-size: 60px;
+            line-height: 1.5;
+        }
     }
     p {
         padding-right: 20px;
@@ -2142,6 +2180,9 @@ start Banner Two Area
         font-size: 18px;
         font-weight: 500;
         margin-right: -25px;
+        @media only screen and (max-width: 990px) {
+            margin-right: 0;
+        }
     }
     .banner-btn {
         .default-btn {
@@ -2428,11 +2469,19 @@ Start My Account Area
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            max-width: 100%;
+        }
     }
     &.login-form-password {
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            max-width: 100%;
+        }
         .default-btn {
             margin-bottom: 0;
         }
@@ -2730,6 +2779,9 @@ End Blog Page Area
     background: #f7f7f7;
     border-radius: 30px;
     padding: 30px;
+    @media only screen and (max-width: 990px) {
+        margin-top: 30px;
+    }
     h2 {
         font-size: 20px;
         font-weight: 600;
@@ -2981,6 +3033,12 @@ Start Contact Us Area
 .single-contact-img {
     position: relative;
     max-width: 585px;
+    @media only screen and (max-width: 990px) {
+        display: flex;
+        justify-content: center !important;
+        align-items: center !important;
+        margin-bottom: 30px;
+    }
     .contact-main-image1s {
         position: absolute;
         bottom: 0;
@@ -3168,6 +3226,10 @@ Start Panther Area
     font-weight: 500;
     color: var(--headingColor);
     margin-bottom: 50px;
+
+    @media only screen and (max-width: 768px) {
+        flex-direction: column !important;
+    }
     h2 {
         font-size: 24px;
         color: var(--mainColor);
@@ -3202,6 +3264,9 @@ Start About Area
     z-index: 1;
     padding: 37px 0;
     left: 20px;
+    @media only screen and (max-width: 768px) {
+        left: 0;
+    }
     .about-shape {
         position: absolute;
         left: -127px;
@@ -3314,6 +3379,10 @@ Start About Style 2 Area
             left: 44%;
             width: 120px;
             height: 60px;
+
+            @media only screen and (max-width: 990px) {
+                position: relative;
+            }
         }
     }
 }
@@ -3566,6 +3635,9 @@ Start Services Two Area
 .single-services-two-content {
     padding-left: 200px;
     position: relative;
+    @media only screen and (max-width: 768px) {
+        padding-left: 0;
+    }
     .services-shape3 {
         position: absolute;
         top: 50%;
@@ -3584,10 +3656,22 @@ Start Services Two Area
         left: -95px;
         top: 52%;
         transform: translateY(-50%);
+
+        @media only screen and (max-width: 990px) {
+            background-color: transparent;
+            top: 100%;
+            bottom: 60%;
+            left: 60%;
+            right: 2%;
+        }
         .default-btn {
             top: 50%;
             transform: translateY(-50%);
             padding: 11px 43px;
+
+            @media only screen and (max-width: 990px) {
+                top: 80%;
+            }
         }
     }
     .services-card-two {
@@ -3595,6 +3679,9 @@ Start Services Two Area
         position: relative;
         left: -134px;
         z-index: 10;
+        @media only screen and (max-width: 990px) {
+            left: 0;
+        }
         &.card1 {
             .services-icon {
                 background: rgba(0, 140, 153, 0.1);
@@ -3607,6 +3694,10 @@ Start Services Two Area
         }
         &.card2 {
             left: -40px;
+
+            @media only screen and (max-width: 990px) {
+                left: 0;
+            }
             .services-icon {
                 background: rgba(0, 140, 153, 0.1);
             }
@@ -3619,6 +3710,9 @@ Start Services Two Area
         &.card3 {
             left: 40px;
             top: 2px;
+            @media only screen and (max-width: 990px) {
+                left: 0;
+            }
             .services-icon {
                 background: rgba(0, 140, 153, 0.1);
                 // img {
@@ -3633,6 +3727,9 @@ Start Services Two Area
         }
         &.card4 {
             left: -30px;
+            @media only screen and (max-width: 990px) {
+                left: 0;
+            }
             .services-icon {
                 background: rgba(0, 140, 153, 0.1);
             }
@@ -3644,6 +3741,9 @@ Start Services Two Area
         }
         &.card5 {
             left: -130px;
+            @media only screen and (max-width: 990px) {
+                left: 0;
+            }
             margin-bottom: 0;
             .services-icon {
                 background: rgba(0, 140, 153, 0.1);
@@ -3961,6 +4061,10 @@ Start Insurance Benefits Area
 }
 .single-insurance-benefits-content {
     padding-left: 38px;
+    @media only screen and (max-width: 900px) {
+        padding-left: 0;
+        margin-top: 20px;
+    }
     .section-title {
         p {
             margin-right: -15px;
@@ -4027,6 +4131,10 @@ Start Free Quote Area
     z-index: 1;
     .free-quote-main {
         margin-right: -80px;
+        @media only screen and (max-width: 768px) {
+            margin-right: 0;
+            margin-top: 40px;
+        }
     }
     .free-quote-shape {
         position: absolute;
@@ -4504,6 +4612,12 @@ Start Odometer Two Area
         &:nth-child(1) {
             .odometer-two-content {
                 left: -52px;
+
+                @media only screen and (max-width: 768px) {
+                    left: 0;
+                    margin: 20px 0;
+                }
+
                 .odometer-shape {
                     left: -18px;
                 }
@@ -4512,6 +4626,11 @@ Start Odometer Two Area
         &:nth-child(2) {
             .odometer-two-content {
                 left: -45px;
+
+                @media only screen and (max-width: 768px) {
+                    left: 0;
+                    margin: 20px 0;
+                }
                 h2 {
                     .odometer-formatting-mark {
                         display: none;
@@ -4526,12 +4645,22 @@ Start Odometer Two Area
             .odometer-two-content {
                 .odometer-shape {
                     left: -7px;
+
+                    @media only screen and (max-width: 768px) {
+                        left: 0;
+                        margin: 20px 0;
+                    }
                 }
             }
         }
         &:nth-child(4) {
             .odometer-two-content {
                 right: -40px;
+
+                @media only screen and (max-width: 768px) {
+                    right: 0;
+                    margin: 20px 0;
+                }
                 .odometer-shape {
                     left: -15px;
                 }
@@ -5672,6 +5801,11 @@ Start Blog Area
 .blog-two-area {
     .blog-item {
         margin-bottom: 40px;
+
+        @media only screen and (max-width: 768px) {
+            flex-direction: column !important;
+        }
+
         .section-title {
             margin-bottom: 0;
             h2 {
@@ -5680,6 +5814,9 @@ Start Blog Area
         }
         .default-btn {
             padding: 11px 44.5px;
+            @media only screen and (max-width: 768px) {
+                margin-top: 20px;
+            }
         }
     }
 }
@@ -5712,6 +5849,10 @@ Start Blog Area
             margin-top: -90px;
             position: relative;
             z-index: 1;
+
+            @media only screen and (max-width: 768px) {
+                margin-top: -10px;
+            }
         }
     }
     &.blog-card-three {
@@ -5893,6 +6034,10 @@ Start Subscribe Area
         bottom: 0;
         top: 0;
         z-index: -1;
+
+        @media only screen and (max-width: 990px) {
+            width: 100%;
+        }
     }
     &::before {
         content: "";
@@ -6021,6 +6166,11 @@ Start Subscribe Area
     }
     .section-title {
         margin-bottom: 0;
+
+        @media only screen and (max-width: 768px) {
+            margin-bottom: 20px;
+        }
+
         h2 {
             color: var(--whiteColor);
             margin-bottom: 0;
@@ -6275,6 +6425,9 @@ Start Go Top CSS
         justify-content: center;
         align-items: center;
         margin-bottom: 20px;
+        @media only screen and (max-width: 768px) {
+            width: 70%;
+        }
     }
     p {
         margin-bottom: 20px;
@@ -6778,6 +6931,10 @@ Start Footer Responsive Css
         width: 600px;
         height: 100%;
         padding: 40px 0;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            max-width: 100%;
+        }
 
         &-content{
 
@@ -6838,6 +6995,11 @@ Start Footer Responsive Css
     line-height: 23px;
     color: #777777;
     transition: var(--transition);
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        max-width: 100%;
+    }
 
     &::placeholder {
         color: #777777;
@@ -7042,7 +7204,6 @@ Start Footer Responsive Css
 .footer-icon{
     width: 36px !important;
     height: 36px !important;
-    line-height: 40px !important;
     color: #555 !important;
     font-size: 16px !important;
     border-radius: 50px !important;
@@ -7057,6 +7218,9 @@ Start Footer Responsive Css
 
 .single-services-details-content {
     padding-right: 20px;
+    @media only screen and (max-width: 990px) {
+        padding-right: 0;;
+    }
     .services-details-img {
         overflow: hidden;
         margin-bottom: 36px;
@@ -7208,6 +7372,21 @@ Start Footer Responsive Css
     position: absolute;
     right: 1%;
     top: 70%;
+
+    @media only screen and (max-width: 990px) {
+        top: 90%;
+        padding: 50px;
+    }
+
+    @media only screen and (max-width: 768px) {
+       right: 0;
+       padding-right: 10px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        top: 100%;
+        padding-right: 10px;
+     }
 }
 .menuCloseButton
 {
@@ -7257,6 +7436,11 @@ Start Footer Responsive Css
     overflow-x: hidden;*/
     z-index: 1000;
     width: 705px;
+
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        overflow: scroll;
+    }
 }
 #side-menu .mainMenu {
     margin-top: 15px;
@@ -7264,7 +7448,12 @@ Start Footer Responsive Css
     padding: 0 0 0 0;
     overflow-y: auto;
     width: 710px;
-    margin-left: -10px;    
+    margin-left: -10px;  
+    
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        margin-left: 0;
+    }
 }
 .main-side-nav {
     position: absolute;
@@ -7465,6 +7654,320 @@ Start Ripple Animation
     width: 30px;
     height: 30px;
 }
+
+.navbar-expand-md .navbar-collapse {
+    @media (min-width: 990px){
+        display: flex!important;
+        flex-basis: auto;
+    }
+}
+
+
+// .mean-container .mean-bar {
+// 	float: left;
+// 	width: 100%;
+// 	position: absolute;
+// 	background: transparent;
+// 	padding: 20px 0 0;
+// 	z-index: 999;
+// 	border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+// 	height: 55px;
+// }
+// .mean-container a.meanmenu-reveal {
+// 	width: 35px;
+// 	height: 30px;
+// 	padding: 12px 15px 0 0;
+// 	position: absolute;
+// 	right: 0;
+// 	cursor: pointer;
+// 	color: #ffffff;
+// 	text-decoration: none;
+// 	font-size: 16px;
+// 	text-indent: -9999em;
+// 	line-height: 22px;
+// 	font-size: 1px;
+// 	display: block;
+// 	font-weight: 700;
+// }
+// .mean-container a.meanmenu-reveal span {
+// 	display: block;
+// 	background: #ffffff;
+// 	height: 4px;
+//     margin-top: 3px;
+//     border-radius: 3px;
+// }
+// .mean-container .mean-nav {
+// 	float: left;
+// 	width: 100%;
+// 	background: #ffffff;
+// 	margin-top: 55px;
+// }
+// .mean-container .mean-nav ul {
+// 	padding: 0;
+// 	margin: 0;
+// 	width: 100%;
+// 	border: none;
+// 	list-style-type: none;
+// }
+// .mean-container .mean-nav ul li {
+// 	position: relative;
+// 	float: left;
+// 	width: 100%;
+// }
+// .mean-container .mean-nav ul li a {
+// 	display: block;
+// 	float: left;
+// 	width: 90%;
+// 	padding: 1em 5%;
+// 	margin: 0;
+// 	text-align: left;
+// 	color: #000000;
+// 	border-top: 1px solid #DBEEFD;
+// 	text-decoration: none;
+//     font-family: 'Roboto', sans-serif !important;
+// }
+// .mean-container .mean-nav ul li a.active {
+// 	color: #000000;
+// }
+// .mean-container .mean-nav ul li li a {
+// 	width: 80%;
+// 	padding: 1em 10%;
+// 	color: #000000;
+// 	border-top: 1px solid #DBEEFD;
+// 	opacity: 1;
+// 	filter: alpha(opacity=75);
+// 	text-shadow: none !important;
+// 	visibility: visible;
+//     font-family: 'Roboto', sans-serif !important;
+// 	text-transform: none;
+// 	font-size: 14px;
+// }
+// .mean-container .mean-nav ul li.mean-last a {
+// 	border-bottom: none;
+// 	margin-bottom: 0;
+// }
+// .mean-container .mean-nav ul li li li a {
+// 	width: 70%;
+// 	padding: 1em 15%;
+// }
+// .mean-container .mean-nav ul li li li li a {
+// 	width: 60%;
+// 	padding: 1em 20%;
+// }
+// .mean-container .mean-nav ul li li li li li a {
+// 	width: 50%;
+// 	padding: 1em 25%;
+// }
+// .mean-container .mean-nav ul li a:hover {
+// 	background: #252525;
+// 	background: rgba(255,255,255,0.1);
+// }
+// .mean-container .mean-nav ul li a.mean-expand {
+// 	margin-top: 1px;
+// 	width: 100%;
+// 	height: 24px;
+// 	padding: 12px !important;
+// 	text-align: right ;
+// 	position: absolute;
+// 	right: 5px;
+// 	top: 0;
+// 	z-index: 2;
+// 	font-weight: 700;
+// 	background: transparent;
+// 	border: none !important;
+// }
+// .mean-container .mean-push {
+// 	float: left;
+// 	width: 100%;
+// 	padding: 0;
+// 	margin: 0;
+// 	clear: both;
+// }
+// .mean-nav .wrapper {
+// 	width: 100%;
+// 	padding: 0;
+// 	margin: 0;
+// }
+// /* Fix for box sizing on Foundation Framework etc. */
+// .mean-container .mean-bar, .mean-container .mean-bar * {
+// 	-webkit-box-sizing: content-box;
+// 	-moz-box-sizing: content-box;
+// 	box-sizing: content-box;
+// }
+// .mean-remove {
+// 	display: none !important;
+// }
+// .mobile-nav {
+//     display: none;
+// }
+// .mobile-nav.mean-container .mean-nav ul li a.active {
+//     color: #FF2D55;
+// }
+// .main-nav {
+//     background: #000;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     padding-top: 15px;
+//     padding-bottom: 15px;
+//     width: 100%;
+//     z-index: 999;
+//     height: auto;
+// }
+// .mean-nav .dropdown-toggle::after {
+// 	display: none;
+// }
+// .navbar-light .navbar-brand, .navbar-light .navbar-brand:hover {
+//     color: #fff;
+//     font-weight: bold;
+//     text-transform: uppercase;
+//     line-height: 1;
+// }
+// .main-nav nav ul {
+//     padding: 0;
+//     margin: 0;
+//     list-style-type: none;
+// }
+// .main-nav nav .navbar-nav .nav-item {
+//     position: relative;
+//     padding: 15px 0;
+// }
+// .main-nav nav .navbar-nav .nav-item a {
+//     font-weight: 500;
+//     font-size: 16px;
+//     text-transform: uppercase;
+//     color: #ffffff;
+//     padding-left: 0;
+//     padding-right: 0;
+//     padding-top: 0;
+//     padding-bottom: 0;
+//     margin-left: 15px;
+//     margin-right: 15px;
+// }
+// .main-nav nav .navbar-nav .nav-item a:hover, 
+// .main-nav nav .navbar-nav .nav-item a:focus, 
+// .main-nav nav .navbar-nav .nav-item a.active {
+//     color: #FF2D55;
+// }
+// .main-nav nav .navbar-nav .nav-item:hover a {
+//     color: #FF2D55;
+// }
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu {
+//     -webkit-box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+//             box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.05);
+//     background: #0d1028;
+//     position: absolute;
+//     top: 80px;
+//     left: 0;
+//     width: 250px;
+//     z-index: 99;
+//     display: block;
+//     padding-top: 20px;
+//     padding-left: 5px;
+//     padding-right: 5px;
+//     padding-bottom: 20px;
+//     opacity: 0;
+//     visibility: hidden;
+//     -webkit-transition: all 0.3s ease-in-out;
+//     transition: all 0.3s ease-in-out;
+// }
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li {
+//     position: relative;
+//     padding: 0;
+// }
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li a {
+//     font-size: 15px;
+//     font-weight: 500;
+//     text-transform: capitalize;
+//     padding: 9px 15px;
+//     margin: 0;
+//     display: block;
+//     color: #ffffff;
+// }
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li a:hover, 
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li a:focus, 
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li a.active {
+//     color: #FF2D55;
+// }
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
+//     position: absolute;
+//     left: -100%;
+//     top: 0;
+//     opacity: 0 !important;
+//     visibility: hidden !important;
+// }
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li:hover .dropdown-menu {
+//     opacity: 1 !important;
+//     visibility: visible !important;
+//     top: -20px !important;
+// }
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li .dropdown-menu {
+//     position: absolute;
+//     left: -100%;
+//     top: 0;
+//     opacity: 0 !important;
+//     visibility: hidden !important;
+// }
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li:hover .dropdown-menu li:hover .dropdown-menu {
+//     opacity: 1 !important;
+//     visibility: visible !important;
+//     top: -20px !important;
+// }
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a {
+//     color: #ffffff;
+//     text-transform: capitalize;
+// }
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:hover, 
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a:focus, 
+// .main-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu li a.active {
+//     color: #ffffff;
+// }
+// .main-nav nav .navbar-nav .nav-item:hover ul {
+//     opacity: 1;
+//     visibility: visible;
+//     top: 100%;
+// }
+// .main-nav nav .navbar-nav .nav-item:last-child .dropdown-menu {
+//     left: auto;
+//     right: 0;
+// }
+
+// /* Responsive Style */
+// @media only screen and (max-width: 991px) {
+//     .mobile-nav {
+//         display: block;
+//         position: relative;
+//     }
+//     .mobile-nav .logo {
+// 		text-decoration: none;
+//         position: absolute;
+//         top: 11px;
+//         z-index: 999;
+//         left: 15px;
+//         color: #fff;
+//         font-weight: bold;
+//         text-transform: uppercase;
+//         font-size: 20px;
+//     }
+//     .mean-container .mean-bar {
+//         background-color: #ffffff;
+//         padding: 0;
+//     }
+//     .mean-container a.meanmenu-reveal {
+//         padding: 15px 15px 0 0;
+//     }
+//     .mobile-nav nav .navbar-nav {
+//         height: 300px;
+//         overflow-y: scroll;
+//     }
+//     .mobile-nav nav .navbar-nav .nav-item a i {
+//         display: none;
+//     }
+//     .main-nav {
+//         display: none !important;
+//     }
+// }
+
 
 /* -----------------------------------
 End Ripple Animation

@@ -113,7 +113,7 @@ const Contact = () => {
         <div className="container">
           <div className="contact-card-item">
             <div className="row justify-content-center">
-              <div className="col-lg-4 col-sm-6 col-md-12">
+              <div className="col-lg-4 col-sm-6 col-md-12 my-3">
                 <div className="contact-card">
                   <div className="contact-icon">
                     <img src="assets/images/contact-phone-2.svg" alt="Phone" />
@@ -125,7 +125,7 @@ const Contact = () => {
                   <a href="tel:(305) 547-9908">+(305) 547-9908</a>
                 </div>
               </div>
-              <div className="col-lg-4 col-sm-6 col-md-12">
+              <div className="col-lg-4 col-sm-6 col-md-12 my-3">
                 <div className="contact-card">
                   <div className="contact-icon">
                     <img src="assets/images/contact-email.svg" alt="Email" />
@@ -137,7 +137,7 @@ const Contact = () => {
                   <a href="mailto:hello@einaya.com">hello@einaya.com</a>
                 </div>
               </div>
-              <div className="col-lg-4 col-sm-6 col-md-12">
+              <div className="col-lg-4 col-sm-6 col-md-12 my-3">
                 <div className="contact-card">
                   <div className="contact-icon">
                     <img src="assets/images/location-icon.svg" alt="images" />

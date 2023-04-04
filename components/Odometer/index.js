@@ -22,7 +22,7 @@ const Odometer = () => {
         <div className="odometer-two-area pt-100 pb-100">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-3 col-6 col-sm-6 col-md-3">
+                    <div className="col-lg-3 col-sm-12 col-md-6">
                         <div className="odometer-two-content">
                             <h2>
                                 <span className="odometer" data-count="89">89 </span>
@@ -34,7 +34,7 @@ const Odometer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-3 col-6 col-sm-6 col-md-3">
+                    <div className="col-lg-3 col-sm-12 col-md-6">
                         <div className="odometer-two-content">
                             <h2>
                                 <span className="odometer" data-count="1120">1120 </span>
@@ -46,7 +46,7 @@ const Odometer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-3 col-6 col-sm-6 col-md-3">
+                    <div className="col-lg-3 col-sm-12 col-md-6">
                         <div className="odometer-two-content">
                             <h2>
                                 <span className="odometer" data-count="1.9">1.9 </span>
@@ -58,7 +58,7 @@ const Odometer = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-3 col-6 col-sm-6 col-md-3">
+                    <div className="col-lg-3 col-sm-12 col-md-6">
                         <div className="odometer-two-content">
                             <h2>
                                 <span className="odometer" data-count="50">50 </span>

@@ -10,12 +10,12 @@ const Services = () => {
                     <h2>Our Best Insurance Services</h2>
                 </div>
                 <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-md-12">
                         <div className="services-img">
                             <img src="assets/images/services/1.svg" alt="services" />
                         </div>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-md-12">
                         <div className="single-services-two-content">
                             <div className="services-btn">
                                 <a href="services-details.html" className="default-btn btn-style-secondary">View All</a>

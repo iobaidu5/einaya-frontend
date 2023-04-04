@@ -11,6 +11,34 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 });
 
 const Team = () => {
+
+  const options = {
+    margin: 10,
+    responsiveClass: true,
+    nav: true,
+    dots: false,
+    autoplay: false,
+    smartSpeed: 1000,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        400: {
+            items: 1,
+        },
+        600: {
+            items: 2,
+        },
+        700: {
+            items: 3,
+        },
+        1000: {
+            items: 3,
+
+        }
+    },
+};
+
   return (
     <>
       <div className="team-area pt-100 pb-70">
@@ -22,12 +50,7 @@ const Team = () => {
           <div className="">
             <OwlCarousel
               className="owl-theme"
-              loop
-              margin={10}
-              nav
-              items={3}
-              dots={false}
-              autoplay={true}
+              {...options}
             >
               <div className="single-team-card">
                 <div className="team-img">

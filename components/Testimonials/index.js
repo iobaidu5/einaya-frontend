@@ -11,6 +11,35 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 });
 
 const Testimonials = () => {
+
+  const options = {
+    margin: 10,
+    responsiveClass: true,
+    nav: true,
+    dots: false,
+    autoplay: false,
+    smartSpeed: 1000,
+    items: 1,
+    responsive: {
+        0: {
+            items: 1,
+        },
+        400: {
+            items: 1,
+        },
+        600: {
+            items: 1,
+        },
+        700: {
+            items: 1,
+        },
+        1000: {
+            items: 1,
+
+        }
+    },
+};
+
   return (
     <>
       <div className="testimonials-area testimonials-two-area pt-100 pb-100">
@@ -55,15 +84,9 @@ const Testimonials = () => {
                     id quod maxime placeat facere.
                   </p>
                 </div>
-                <div className="">
                   <OwlCarousel
                     className="owl-theme"
-                    loop
-                    margin={10}
-                    nav
-                    items={1}
-                    dots={false}
-                    autoplay={true}
+                    {...options}
                   >
                     <div className="testimonials-item">
                       <div className="testimonials-client d-flex align-items-center">
@@ -134,8 +157,30 @@ const Testimonials = () => {
                         </p>
                       </div>
                     </div>
+                    <div className="testimonials-item">
+                      <div className="testimonials-client d-flex align-items-center">
+                        <img
+                           src="./assets/images/testimonials/testimonials-img-4.svg"
+                          alt="testimonials"
+                        />
+                        <div className="testimonials-text">
+                          <h3>Graham Cracker</h3>
+                          <p>Founder</p>
+                        </div>
+                      </div>
+                      <div className="testimonials-card testimonials-card-two">
+                        <div className="quote-icon">
+                          <img src="./assets/images/quote-two.svg" alt="quote" />
+                        </div>
+                        <p>
+                          Which is the same as saying through shrinking from
+                          toil and pain is cases are perfectly simple and easy
+                          to distinguish in a free hour whenour power of choice
+                          is untrammelled and when nothing.
+                        </p>
+                      </div>
+                    </div>
                   </OwlCarousel>
-                </div>
               </div>
             </div>
           </div>
