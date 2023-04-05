@@ -370,6 +370,7 @@ Start NavBer Css
             width: 100%;
             max-width: 100%;
         }
+
     }
     &.main-navbar-two {
         padding: 0;
@@ -439,6 +440,7 @@ Start NavBer Css
                 margin-right: 15px;
 
                 @media only screen and (max-width: 990px) {
+                    padding-left: 15px !important;
                     margin-left: 0px;
                 }
                 
@@ -919,7 +921,8 @@ Start NavBer Responsive Css
         .others-option-for-responsive {
             display: block;
             .dot-menu {
-                bottom: -2px;
+                bottom: 30px;
+                right: 10%;
             }
         }
         &.navbar-area-three {
@@ -1177,6 +1180,10 @@ End NavBer Responsive Css
     .navbar-area {
         padding-top: 20px;
         padding-bottom: 20px;
+
+        @media only screen and (max-width: 768px) {
+            padding-top: 0;
+        }
     }
     // .main-navbar {
     //     display: none;
@@ -1196,9 +1203,13 @@ End NavBer Responsive Css
             cursor: pointer;
             z-index: 9991;
             position: absolute;
-            right: 52px;
-            bottom: 0;
             font-weight: 500;
+            bottom: 30px;
+            right: 15%;
+
+            @media only screen and (max-width: 600px) {
+                right: 20%;
+            }
     
             .inner {
                 display: flex;
@@ -1598,6 +1609,9 @@ img {
 }
 .pb-70 {
     padding-bottom: 70px;
+    @media only screen and (max-width: 600px) {
+        padding-top: 50px;
+    }
 }
 .pb-100 {
     padding-bottom: 100px;
@@ -1607,6 +1621,9 @@ img {
 }
 .pt-100 {
     padding-top: 100px;
+    @media only screen and (max-width: 768px) {
+        padding-top: 70px;
+    }
 }
 .pt-70 {
     padding-top: 70px;
@@ -1692,8 +1709,12 @@ Start Section Title
 .section-title {
     text-align: center;
     margin-bottom: 35px;
+    @media only screen and (max-width: 768px) {
+        margin-bottom: 50px;
+    }
     &.left-title {
         text-align: left;
+
         h2 {
             margin-bottom: 15px;
         }
@@ -2129,6 +2150,10 @@ start Banner Two Area
         padding-top: 200px;
         padding-bottom: 200px;
     }
+    @media only screen and (max-width: 768px) {
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
     .banner-two-shape {
         position: absolute;
         bottom: 37px;
@@ -3363,6 +3388,9 @@ Start About Style 2 Area
 .about-style-2-area {
     position: relative;
     z-index: 1;
+    @media only screen and (max-width: 768px) {
+      padding-top: 0 !important;
+    }
     .about-two-shape {
         position: relative;
         width: 100%;
@@ -3622,9 +3650,15 @@ Start Services Two Area
 .services-img {
     margin-bottom: 23px;
     text-align: end;
+    @media only screen and (max-width: 990px) {
+        text-align: center;
+    }
     img {
         border-radius: 0px 90px 0px 90px;
         max-width: 575px;
+        @media only screen and (max-width: 990px) {
+            max-width: 100%;
+        }
     }
 }
 .services-img-1 {
@@ -3635,7 +3669,7 @@ Start Services Two Area
 .single-services-two-content {
     padding-left: 200px;
     position: relative;
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 990px) {
         padding-left: 0;
     }
     .services-shape3 {
@@ -3661,8 +3695,9 @@ Start Services Two Area
             background-color: transparent;
             top: 100%;
             bottom: 60%;
-            left: 45%;
-            right: 2%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
         }
         .default-btn {
             top: 50%;
@@ -3681,6 +3716,7 @@ Start Services Two Area
         z-index: 10;
         @media only screen and (max-width: 990px) {
             left: 0;
+            display: block !important;
         }
         &.card1 {
             .services-icon {
@@ -3689,6 +3725,10 @@ Start Services Two Area
             h3 {
                 a {
                     background: rgba(0, 140, 153, 0.1);
+                    @media only screen and (max-width: 990px) {
+                       width: 100% !important;
+                       max-width: 100% !important;
+                    }
                 }
             }
         }
@@ -3704,6 +3744,10 @@ Start Services Two Area
             h3 {
                 a {
                     background: rgba(0, 140, 153, 0.1);
+                    @media only screen and (max-width: 990px) {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                     }
                 }
             }
         }
@@ -3722,6 +3766,10 @@ Start Services Two Area
             h3 {
                 a {
                     background: rgba(0, 140, 153, 0.1);
+                    @media only screen and (max-width: 990px) {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                     }
                 }
             }
         }
@@ -3736,6 +3784,10 @@ Start Services Two Area
             h3 {
                 a {
                     background: rgba(0, 140, 153, 0.1);
+                    @media only screen and (max-width: 990px) {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                     }
                 }
             }
         }
@@ -3751,6 +3803,10 @@ Start Services Two Area
             h3 {
                 a {
                     background: rgba(0, 140, 153, 0.1);
+                    @media only screen and (max-width: 990px) {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                     }
                 }
             }
         }
@@ -4026,6 +4082,13 @@ Start services Three Area
                 &:hover {
                     background-color: #2CB2B3;
                     color: var(--whiteColor);
+                }
+
+                @media only screen and (max-width: 990px) {
+                    font-size: 20px;
+                    width: 30px;
+                    height: 30px;
+                    line-height: 1.4;
                 }
             }
             .owl-next {
@@ -4919,6 +4982,9 @@ Start Recruitment Area
         margin-right: auto;
         overflow: hidden;
         border-radius: 100%;
+        @media only screen and (max-width: 768px) {
+            bottom: -10%;
+        }
         img {
             transition: var(--transition);
             border-radius: 100%;
@@ -5230,6 +5296,10 @@ Start Testimonials Area
 .single-testimonials-img {
     position: relative;
     z-index: 1;
+    @media only screen and (max-width: 990px) {
+        display: flex;
+        justify-content: center;
+    }
     .testimonials-bg-shape12 {
         z-index: -1;
         position: relative;
@@ -5244,6 +5314,10 @@ Start Testimonials Area
         left: 0;
         right: 83px;
         text-align: center;
+        @media only screen and (max-width: 990px) {
+            left: 0;
+            right: 0;
+        }
         img {
             max-width: 328px;
             border-radius: 100%;
@@ -5253,6 +5327,12 @@ Start Testimonials Area
         position: absolute;
         left: -35px;
         top: 77px;
+        @media only screen and (max-width: 990px) {
+            left: 0;
+        }
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
         img {
             border-radius: 100%;
             max-width: 107px;
@@ -5263,6 +5343,12 @@ Start Testimonials Area
         position: absolute;
         right: 90px;
         bottom: 35px;
+        @media only screen and (max-width: 990px) {
+            right: 0;
+        }
+        @media only screen and (max-width: 768px) {
+            display: none;
+        }
         img {
             border-radius: 100%;
             max-width: 107px;
@@ -6058,6 +6144,9 @@ Start Subscribe Area
     position: relative;
     z-index: 1;
     margin-left: 20px;
+    @media only screen and (max-width: 990px) {
+        margin-left: 0;
+    }
     &.subscribe-from-style-2 {
         .newsletter-form {
             div#validator-newsletter {
@@ -6168,6 +6257,7 @@ Start Subscribe Area
         margin-bottom: 0;
 
         @media only screen and (max-width: 768px) {
+            text-align: center;
             margin-bottom: 20px;
         }
 
@@ -6280,13 +6370,24 @@ Start Go Top CSS
     padding-top: 70px;
     padding-bottom: 70px;
 
+    @media only screen and (max-width: 990px) {
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+
     &_image{
         margin-right: 40px;
+        @media only screen and (max-width: 990px) {
+            margin-right: 0;
+        }
 
         &-img{
             width: 100%;
             max-width: 100%;
             height: 633px;
+            @media only screen and (max-width: 990px) {
+                height: auto;
+            }
         }
     }
 
@@ -6405,8 +6506,15 @@ Start Go Top CSS
 }
 
 .footer-widget {
+
     .black-logo {
         display: block !important;
+        @media only screen and (max-width: 768px) {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto !important;
+        }
     }
     .white-logo {
         display: none !important;
@@ -6832,6 +6940,11 @@ Start Footer Responsive Css
     display: flex !important;
     justify-content: flex-end !important;
     align-items: center !important;
+
+    @media only screen and (max-width: 768px) {
+        justify-content: center !important;
+        margin-top: 25px !important;
+    }
 }
 
 
@@ -6857,6 +6970,14 @@ Start Footer Responsive Css
     color: var(--headingColor) !important;
     -webkit-transition: var(--transition) !important;
     transition: var(--transition) !important;
+
+    
+    @media only screen and (max-width: 990px) {
+        font-size: 20px !important;
+        width: 30px !important;
+        height: 30px !important;
+        line-height: 1.4 !important;
+    }
 }
 
 .owl-next{
@@ -6881,6 +7002,13 @@ Start Footer Responsive Css
     color: var(--headingColor) !important;
     -webkit-transition: var(--transition) !important;
     transition: var(--transition) !important;
+
+    @media only screen and (max-width: 990px) {
+        font-size: 20px !important;
+        width: 30px !important;
+        height: 30px !important;
+        line-height: 1.4 !important;
+    }
 }
 
 .padd-rig{
@@ -7178,6 +7306,12 @@ Start Footer Responsive Css
     }
 }
 
+.to-hide-990{
+    @media only screen and (max-width: 990px) {
+        display: none !important;
+    }
+}
+
 .btn-padding{
     border-radius: 30px;
 }
@@ -7373,18 +7507,28 @@ Start Footer Responsive Css
     right: 1%;
     top: 70%;
 
+    @media only screen and (max-width: 1200px) {
+        top: 100%;
+        padding: 50px;
+    }
+
     @media only screen and (max-width: 990px) {
-        top: 90%;
+        top: 65%;
         padding: 50px;
     }
 
     @media only screen and (max-width: 768px) {
+        top: 70%;
        right: 0;
        padding-right: 10px;
     }
 
     @media only screen and (max-width: 600px) {
-        top: 100%;
+        top: 70%;
+        padding-right: 10px;
+     }
+     @media only screen and (max-width: 480px) {
+        top: 115%;
         padding-right: 10px;
      }
 }
@@ -7399,6 +7543,10 @@ Start Footer Responsive Css
     margin-left: 20px;
     margin-top: 40px;
     color: #000;
+    @media only screen and (max-width: 990px) {
+        top: -10%;
+        left: -5%;
+    }
 }
 .menuButton:hover,
 .menuCloseButton:hover,
@@ -7463,6 +7611,10 @@ Start Footer Responsive Css
     height: 100%;
     z-index: 100000;
     transition: right .4s ease;
+
+    @media only screen and (max-width: 990px) {
+        right: -760px;
+    }
 }
 .open-side-nav {
     right: 0 !important;

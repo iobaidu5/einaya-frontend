@@ -123,7 +123,7 @@ export const Footer = () => {
                   <div className="contact-icon">
                     <img src="./assets/images/location-icon.svg" alt="svg" />
                   </div>
-                  <p>No. 12, Ribon Building, Walse street, Australia</p>
+                  <p>Khartoum, Sudan</p>
                 </div>
               </div>
             </div>

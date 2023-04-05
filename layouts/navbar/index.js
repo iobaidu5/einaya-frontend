@@ -231,7 +231,7 @@ export const Navbar = () => {
                     </li>
                   </ul>
 
-                  <div className="others-options d-flex align-items-center">
+                  <div className="others-options d-flex align-items-center to-hide-990">
                     <div className="option-item">
                       <button
                         className="searchbtn"
@@ -264,7 +264,9 @@ export const Navbar = () => {
                 <div className="option-inner">
                   <div className="others-options d-flex align-items-center">
                     <div className="option-item">
-                      <button className="searchbtn" type="button">
+                      <button  className="searchbtn"
+                        type="button"
+                        onClick={handleSearch}>
                         <i className="bx bx-search"></i>
                       </button>
                     </div>

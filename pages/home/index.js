@@ -10,12 +10,10 @@ import Subscribe from "../../components/Subscribe";
 import Testimonials from "../../components/Testimonials";
 import Team from "../../components/Team";
 import Blog from "../../components/Blog";
-import SideBar from "../../components/Sidebar";
 
 const Home = () => {
   return (
     <>
-      <SideBar />
       <Slider />
       <Partners />
       <About />

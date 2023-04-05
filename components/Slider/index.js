@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import SideBar from "../../components/Sidebar";
 
 const Slider = () => {
   return (
@@ -47,6 +48,7 @@ const Slider = () => {
         </div>
       </div>
       {/* End Banner Two Area  */}
+      <SideBar />
     </>
   );
 };
