@@ -4982,9 +4982,6 @@ Start Recruitment Area
         margin-right: auto;
         overflow: hidden;
         border-radius: 100%;
-        @media only screen and (max-width: 768px) {
-            bottom: -10%;
-        }
         img {
             transition: var(--transition);
             border-radius: 100%;
@@ -6482,7 +6479,6 @@ Start Go Top CSS
     overflow: hidden;
     position: relative;
     z-index: 1;
-    margin-top: 40px;
     .footer-shape-1 {
         position: absolute;
         left: 0;

@@ -15,6 +15,34 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 
 const AboutUs = () => {
 
+    const options = {
+        margin: 10,
+        responsiveClass: true,
+        nav: true,
+        dots: false,
+        autoplay: false,
+        smartSpeed: 1000,
+        items: 2,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            400: {
+                items: 1,
+            },
+            600: {
+                items: 1,
+            },
+            700: {
+                items: 1,
+            },
+            1000: {
+                items: 2,
+    
+            }
+        },
+    };
+
     useEffect(() => {
         const settings={
             fill: "#51CB20",
@@ -265,12 +293,7 @@ const AboutUs = () => {
                 <div className="">
                 <OwlCarousel
                     className="owl-theme"
-                    loop
-                    margin={10}
-                    nav
-                    items={2}
-                    dots={false}
-                    autoplay={true}
+                    {...options}
                   >
                     <div className="testimonials-item">
                         <div className="testimonials-client d-flex align-items-center">
