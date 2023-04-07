@@ -200,6 +200,7 @@ export const Navbar = () => {
                 <button
                   class="navbar-toggler"
                   type="button"
+                  id="navbarBtn"
                   data-bs-toggle="collapse"
                   data-bs-target="#navbarNav"
                   aria-controls="navbarNav"
@@ -260,7 +261,7 @@ export const Navbar = () => {
                   <div className="circle circle-three"></div>
                 </div>
               </div>
-              <div className="container">
+              <div className="container" id="nav-2">
                 <div className="option-inner">
                   <div className="others-options d-flex align-items-center">
                     <div className="option-item">

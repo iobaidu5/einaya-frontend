@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Slider from "../../components/Slider";
 import Partners from "../../components/Partners";
 import About from "../../components/About";
@@ -12,6 +12,16 @@ import Team from "../../components/Team";
 import Blog from "../../components/Blog";
 
 const Home = () => {
+
+  useEffect(() => {
+    var nav = document.getElementById("navbarNav");
+    var nav2 = document.getElementById("nav-2");
+    var btn = document.getElementById("navbarBtn");
+    nav.classList.remove("show");
+    btn.classList.add("collapsed");
+    nav2.classList.remove("active")
+  }, [])
+
   return (
     <>
       <Slider />

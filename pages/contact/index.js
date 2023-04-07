@@ -1,10 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm, Form } from "../../genericComponents";
 import Link from "next/link";
 
 const Contact = () => {
   const { getFormValues, setFormValues, ...others } = useForm();
   const [invalidFormat, setInvalidFormat] = useState(false);
+
+  useEffect(() => {
+    var nav = document.getElementById("navbarNav");
+    var nav2 = document.getElementById("nav-2");
+    var btn = document.getElementById("navbarBtn");
+    nav.classList.remove("show");
+    btn.classList.add("collapsed");
+    nav2.classList.remove("active")
+  }, [])
 
   var fieldsData = [
     {
