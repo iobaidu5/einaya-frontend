@@ -281,7 +281,6 @@ const SideBar = () => {
       );
       if (res.data.success) {
         // setShow(true)
-        dispatch(showSidebar(true));
         setProviders(res?.data?.data);
         dispatch(hideLoading());
       } else {
@@ -571,7 +570,7 @@ const SideBar = () => {
                   </>
                 )}
 
-                {doctors.length == 0 && !showProviders ? (
+                {doctors.length == 0  ? (
                   <p className="sidebar_content-title--h2 color-2 text-center">
                     No Doctor Found!
                   </p>

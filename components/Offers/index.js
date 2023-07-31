@@ -84,7 +84,7 @@ const Offers = () => {
             <div className="row">
               {data.map((plan, index) => {
                 return (
-                  <div className="col-md-4">
+                  <div className="col-md-4" key={index}>
                     <div
                       className={index == 1 ? "offers_card2" : "offers_card"}
                     >

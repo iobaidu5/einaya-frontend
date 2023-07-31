@@ -6,7 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { showLoading, hideLoading } from "../../redux/features/alertSlice";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
-import { ChangePlanModal } from "./change-plan";
+import  ChangePlanModal  from "./change-plan";
 import { setToggleModal } from "../../redux/features/modalSlice";
 import { withAuth } from '../../customHooks/withAuth';
 

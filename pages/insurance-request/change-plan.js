@@ -2,7 +2,7 @@ import * as React from "react";
 import { Modal } from "next-modal";
 import Offers from "../../components/Offers";
 
-export function ChangePlanModal({
+ function ChangePlanModal({
   toggleModal,
   setToggleModal,
 }) {
@@ -15,3 +15,6 @@ export function ChangePlanModal({
   </div>
   );
 }
+
+
+export default ChangePlanModal;

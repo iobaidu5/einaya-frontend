@@ -122,9 +122,9 @@ const Testimonials = () => {
                   </p>
                 </div>
                 <OwlCarousel className="owl-theme" {...options}>
-                  {data?.map((user) => {
+                  {data?.map((user, index) => {
                     return (
-                      <div className="testimonials-item">
+                      <div key={index} className="testimonials-item">
                         <div className="testimonials-client d-flex align-items-center">
                           <img
                             src="./assets/images/testimonials/testimonials-img-4.svg"

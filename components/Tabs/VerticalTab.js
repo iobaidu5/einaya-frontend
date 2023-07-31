@@ -10,7 +10,7 @@ import AccountManagement from "./AccountManagement";
 import MyCards from "./MyCards";
 import MyRequests from "./MyRequests";
 import Notifications from "./Notifications";
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router'
 
 function VerticalTab(props) {
   const { activeTabId } = useSelector((state) => state.tab);
@@ -28,7 +28,7 @@ function VerticalTab(props) {
     localStorage.clear();
     //router.push("/logout");
     window.location.href = "/";
-  };
+  }
 
   return (
     <div className="section__Jobs-container">
@@ -37,35 +37,26 @@ function VerticalTab(props) {
           <div className="col-md-3">
             <div className="section__Jobs-styledTab">
               <ul className="section__Jobs-styledTabList">
-                {props.tabs.map((tab, index) =>
-                  tab.title !== "Logout" ? (
-                    <VTlist
-                    key={index} // This line is missing
+                {props.tabs.map((tab, index) => (
+                  tab.title !== "Logout" ? 
+                  <VTlist
+                    key={tab?.index}
                     onClick={btnClick}
                     tabName={tab?.title}
-                    leading={
-                      tab?.title === "Notifications" &&
-                      user?.user?.notification?.length
-                    }
+                    leading={tab?.title === "Notifications" && user?.user?.notification?.length}
                     index={index}
                     activeTabId={activeTabId}
-                  />
-                  ) : (
-                    <div
-                    key={`logout_${index}`} // This line is missing
-                    className=""
-                    style={{ position: "absolute", bottom: "-10%" }}
-                  >
+                  /> : <div key={index} className="" style={{ position: "absolute", bottom: "-10%",}}>
                     <VTlist
-                      onClick={handleLogout}
-                      tabName={tab?.title}
-                      index={index}
-                      activeTabId={activeTabId}
-                      className="logout-tab"
-                    />
-                  </div>
-                  )
-                )}
+                   key={tab?.index}
+                  onClick={handleLogout}
+                  tabName={tab?.title}
+                  index={index}
+                  activeTabId={activeTabId}
+                  className="logout-tab"
+                />
+                    </div>
+                ))}
               </ul>
             </div>
           </div>
