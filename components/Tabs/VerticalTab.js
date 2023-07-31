@@ -51,19 +51,27 @@ function VerticalTab(props) {
                       activeTabId={activeTabId}
                     />
                   ) : (
-                    <div
-                    key={`logout_${index}`}
-                      className=""
-                      style={{ position: "absolute", bottom: "-10%" }}
-                    >
-                      <VTlist
-                        onClick={handleLogout}
-                        tabName={tab?.title}
-                        index={index}
-                        activeTabId={activeTabId}
-                        className="logout-tab"
-                      />
-                    </div>
+                    <VTlist
+                      key={`logout_${index}`}
+                      onClick={handleLogout}
+                      tabName={tab?.title}
+                      index={index}
+                      activeTabId={activeTabId}
+                      className="logout-tab"
+                    />
+                    // <div
+                    // key={`logout_${index}`}
+                    //   className=""
+                    //   style={{ position: "absolute", bottom: "-10%" }}
+                    // >
+                    //   <VTlist
+                    //     onClick={handleLogout}
+                    //     tabName={tab?.title}
+                    //     index={index}
+                    //     activeTabId={activeTabId}
+                    //     className="logout-tab"
+                    //   />
+                    // </div>
                   )
                 )}
               </ul>
