@@ -52,12 +52,11 @@ function VerticalTab(props) {
                     />
                   ) : (
                     <div
-                      key={index}
+                    key={`logout_${index}`}
                       className=""
                       style={{ position: "absolute", bottom: "-10%" }}
                     >
                       <VTlist
-                        key={index}
                         onClick={handleLogout}
                         tabName={tab?.title}
                         index={index}
