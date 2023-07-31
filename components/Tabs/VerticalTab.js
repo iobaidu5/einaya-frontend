@@ -46,7 +46,7 @@ function VerticalTab(props) {
                     leading={tab?.title === "Notifications" && user?.user?.notification?.length}
                     index={index}
                     activeTabId={activeTabId}
-                  /> : <div className="" style={{ position: "absolute", bottom: "-10%",}}>
+                  /> : <div  key={Math.random()} className="" style={{ position: "absolute", bottom: "-10%",}}>
                     <VTlist
                    key={Math.random()}
                   onClick={handleLogout}
