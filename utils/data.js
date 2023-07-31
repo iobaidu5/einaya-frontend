@@ -38,38 +38,38 @@ let tabData = {
     tabs: [
       {
         title: "Profile",
-        leading: ""
-        // index: 0
+        leading: "",
+        index: 0
       },
       {
         title: "Personal Information",
-        leading: ""
-        // index: 1
+        leading: "",
+        index: 1
       },
       {
         title: "Account management",
-        leading: ""
-        // index: 2
+        leading: "",
+        index: 2
       },
       {
         title: "My Cards",
-        leading: ""
-        // index: 3
+        leading: "",
+        index: 3
       },
       {
         title: "My Requests",
-        leading: ""
-        // index: 4
+        leading: "",
+        index: 4
       },
       {
         title: "Notifications",
-        leading: "0"
-        // index: 5
+        leading: "0",
+        index: 5
       },
       {
         title: "Logout",
         
-        // index: 5
+        index: 6
       }
     ]
   };

@@ -23,7 +23,7 @@ const Profile = () => {
       <div className="container">
         <div className="tabs">
           <div className="tabs_content">
-            <VerticalTab data={tabData.jobs} tabs={tabData.tabs} />
+            <VerticalTab  data={tabData.jobs} tabs={tabData.tabs} />
           </div>
         </div>
       </div>
