@@ -40,38 +40,30 @@ function VerticalTab(props) {
                 {props.tabs.map((tab, index) =>
                   tab.title !== "Logout" ? (
                     <VTlist
-                      key={index}
-                      onClick={btnClick}
-                      tabName={tab?.title}
-                      leading={
-                        tab?.title === "Notifications" &&
-                        user?.user?.notification?.length
-                      }
-                      index={index}
-                      activeTabId={activeTabId}
-                    />
+                    key={index} // This line is missing
+                    onClick={btnClick}
+                    tabName={tab?.title}
+                    leading={
+                      tab?.title === "Notifications" &&
+                      user?.user?.notification?.length
+                    }
+                    index={index}
+                    activeTabId={activeTabId}
+                  />
                   ) : (
+                    <div
+                    key={`logout_${index}`} // This line is missing
+                    className=""
+                    style={{ position: "absolute", bottom: "-10%" }}
+                  >
                     <VTlist
-                      key={`logout_${index}`}
                       onClick={handleLogout}
                       tabName={tab?.title}
                       index={index}
                       activeTabId={activeTabId}
                       className="logout-tab"
                     />
-                    // <div
-                    // key={`logout_${index}`}
-                    //   className=""
-                    //   style={{ position: "absolute", bottom: "-10%" }}
-                    // >
-                    //   <VTlist
-                    //     onClick={handleLogout}
-                    //     tabName={tab?.title}
-                    //     index={index}
-                    //     activeTabId={activeTabId}
-                    //     className="logout-tab"
-                    //   />
-                    // </div>
+                  </div>
                   )
                 )}
               </ul>
