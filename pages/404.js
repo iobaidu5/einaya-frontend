@@ -6,9 +6,9 @@ const NotFound = () => {
     var nav = document.getElementById("navbarNav");
     var nav2 = document.getElementById("nav-2");
     var btn = document.getElementById("navbarBtn");
-    nav.classList.remove("show");
-    btn.classList.add("collapsed");
-    nav2.classList.remove("active")
+    nav?.classList?.remove("show");
+    btn?.classList?.add("collapsed");
+    nav2?.classList?.remove("active")
   }, [])
   return (
     <>

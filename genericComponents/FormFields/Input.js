@@ -1,42 +1,157 @@
 import React from "react";
-// import { TextField, IconButton, Avatar } from "@mui/material";
 
-export const Input = ({ id, name, label, type = "text", variant = "outlined", style, required, min, max, pattern,
-  errors, register, classname, rows, ...props }) => {
-  return (<>
-    <input
-      id={id}
-      name={name}
-      label={label}
-      type={type}
-      variant={variant}
-      className={classname}
-      rows={rows}
-      style={type === "textarea" ? { width: "100%", height: "100%", marginBottom: "10px", ...style } : { width: "100%", marginBottom: "10px", ...style }}
-      {...register(name,
-        {
-          required: required ? required === true ? `${label} is Required` : required : false, //should be true, false or custom message
-          minLength: min && {
-            value: min,
-            message: `Minimum Length should be ${min}`
-          },
-          maxLength: max && {
-            value: max,
-            message: `Maximum Length should be ${max}`
-          },
-          pattern: type === "email" & !pattern ? {
-            value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-            message: "invalid email address"
-          } : pattern && {
-            value: pattern,
-            message: "invalid Pattern"
-          }
-        }
+export const Input = ({
+  id,
+  name,
+  label,
+  placeholder,
+  endIcon,
+  type = "text",
+  variant = "filled",
+  style,
+  required,
+  min,
+  max,
+  pattern,
+  errors,
+  register,
+  defaultValue,
+  rows = 1,
+  maxrows = 1,
+  multiline = false,
+  options = [],
+  ...props
+}) => {
+  return (
+    <>
+      <label
+        for={name}
+        style={{
+          fontFamily: "Ubuntu",
+          fontStyle: "normal",
+          fontWeight: 500,
+          fontSize: "14px",
+          lineHeight: "20px",
+          paddingLeft: "30px"
+        }}
+      >
+        {label}
+      </label>
+      {type !== "radio" && type !== "dropdown" && type !== "checkbox" ? (
+        <>
+          <input
+            id={id}
+            name={name}
+            placeholder={placeholder}
+            type={type}
+            multiline={multiline}
+            rows={rows}
+            // variant={variant}
+            style={{
+              width: "100%",
+              marginBottom: "10px",
+              background: "#F0F0F0",
+              height: multiline === true ? "100%" : "45px",
+              padding: "8px 12px",
+              borderRadius: "8px",
+              border: "none",
+              outline: "none",
+              ...style,
+            }}
+            {...register(name, {
+              required: required
+                ? required === true
+                  ? `${label} is Required`
+                  : required
+                : false, //should be true, false or custom message
+              minLength: min && {
+                value: min,
+                message: `Minimum Length should be ${min}`,
+              },
+              maxLength: max && {
+                value: max,
+                message: `Maximum Length should be ${max}`,
+              },
+              pattern:
+                (type === "email") & !pattern
+                  ? {
+                    value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                    message: "invalid email address",
+                  }
+                  : pattern && {
+                    value: pattern,
+                    message: "invalid Pattern",
+                  },
+            })}
+            error={errors?.[name]?.message}
+            helperText={errors?.[name]?.message}
+            {...props}
+          />
+          {props.chips &&
+            props.chips.map((chip) => (
+              <span
+                label={chip}
+                sx={{ mr: 1 }}
+                onClick={() => {
+                  props?.onChange(chip);
+                }}
+                color={props?.value == chip ? "warning" : "info"}
+              />
+            ))}
+        </>
+      ) : type === "radio" ? (
+        <div
+          row
+          aria-labelledby="demo-row-radio-buttons-group-label"
+          name="row-radio-buttons-group"
+          defaultChecked={defaultValue}
+          defaultValue={defaultValue}
+          {...props}
+        >
+          {options?.map(({ value, label }) => {
+            return <input value={value} name={value} type="radio" checked={defaultValue} defaultValue={defaultValue}  label={label} />
+          })}
+        </div>
+      ) : type === "checkbox" ? (
+        <div className="checkbox">
+          <label
+            control={<input type="checkbox" />}
+            label={placeholder}
+          /> {label}
+        </div>
+      ) : (
+        <div fullWidth>
+          <select
+            // inputProps={{
+            //   name: { name },
+            //   id: "uncontrolled-native",
+            // }}
+            defaultValue={defaultValue}
+            style={{
+              width: "100%",
+              marginBottom: "10px",
+              background: "#F0F0F0",
+              height: multiline === true ? "100%" : "45px",
+              padding: "8px 12px",
+              borderRadius: "8px",
+              border: "none",
+              outline: "none",
+              fontFamily: "Jost",
+              fontStyle: "normal",
+              fontWeight: 300,
+              fontSize: "16px",
+              lineHeight: "24px",
+              color: "#777",
+              ...style,
+            }}
+            {...props}
+          >
+            {options.map((o) => {
+              return <option className="select-option" name={o.value} value={o.value}>&nbsp;&nbsp;{o.value}</option>;
+            })}
+          </select>
+        </div>
       )}
-      error={errors?.[name]?.message}
-      helperText={errors?.[name]?.message}
-      {...props}
-    />
     {(["file"].includes(type) && style?.display === "none") &&
       <label htmlFor={id}>
         {/* <IconButton component="span">
@@ -54,5 +169,4 @@ export const Input = ({ id, name, label, type = "text", variant = "outlined", st
       </label>}
   </>
   );
-}
-
+};

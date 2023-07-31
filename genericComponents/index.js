@@ -5,4 +5,5 @@ export { CustomTable as Table } from "./Table";
 export { CustomBackdrop as Loader } from "./Backdrop";
 export { useForm, Form } from "./Form";
 export { Input } from "./FormFields";
-export { CustomizedSnackbars as SnackBar } from "./SnackBar";
+export { CustomizedSnackbars as SnackBar } from "./Toast";
+export { QRcodeScanner as QRCodeScanner } from "./QRcodeScanner";

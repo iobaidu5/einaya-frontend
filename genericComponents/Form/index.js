@@ -1,6 +1,7 @@
 import { Controller, useForm as useFormHook } from "react-hook-form";
 // import { Input, Button } from "/components";
 
+
 export const useForm = () => {
   const {
     register,
@@ -34,7 +35,9 @@ export const Form = ({
   submitHandler,
   handleSubmit,
   formType,
+  rows = 1,
 }) => {
+
   return (
     <form
       onSubmit={handleSubmit(submitHandler)}
@@ -52,43 +55,119 @@ export const Form = ({
                 return (
                   <div className={gridStyle}>
                     {props?.type === "textarea" ? (
-                      <textarea
-                        className="input"
-                        register={register}
-                        errors={errors}
-                        onChange={(e) => {
-                          onChange(e);
-                          props?.onChangeHandler && props?.onChangeHandler(e);
-                        }}
-                        {...(props?.type === "file" &&
-                          props?.style?.display === "none" && {
-                            icon: icon || value,
+                      <>
+                        <div className="">
+                          <label className="input-label">{props.label}</label>
+                          <textarea
+                            className="input"
+                            register={register}
+                            errors={errors}
+                            rows={rows}
+                            style={{ height: "100%" }}
+                            onChange={(e) => {
+                              onChange(e);
+                              props?.onChangeHandler &&
+                                props?.onChangeHandler(e);
+                            }}
+                            {...(props?.type === "file" &&
+                              props?.style?.display === "none" && {
+                                icon: icon || value,
+                              })}
+                            {...(!(
+                              props?.type === "file" &&
+                              props?.style?.display === "none"
+                            ) && { value: value })}
+                            {...props}
+                          ></textarea>
+                        </div>
+                      </>
+                    ) : props?.type === "radio" ? (
+                      <>
+                        <label className="input-label">{props.label}</label>
+                        <div
+                          aria-labelledby="demo-row-radio-buttons-group-label"
+                          name="row-radio-buttons-group"
+                          defaultChecked={props.value}
+                          {...props}
+                        >
+                          <div className="d-flex justify-content-start align-items-center gap-5 mb-3">
+                            {props?.options?.map(({ value, label }) => {
+                              return (
+                                <>
+                                  <span className="d-flex justify-content-between mx-4">
+                                    <input
+                                      value={value}
+                                      type="radio"
+                                      name={props.name}
+                                      label={label}
+                                      defaultValue={props?.defaultValue}
+                                      checked={value === props?.defaultValue}
+                                      className="checkbox"
+                                    />
+                                    <label className="input-label mx-2">
+                                      {label}
+                                    </label>
+                                  </span>
+                                </>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </>
+                    ) : props.type === "dropdown" ? (
+                      <div fullWidth>
+                        <label className="input-label mb-3">{props.label}</label>
+                        <select
+                          defaultValue={props?.defaultValue}
+                          className="input"
+                          // inputProps={{
+                          //   name: { name },
+                          //   id: "uncontrolled-native",
+                          // }}
+                          
+                          style={{
+                            width: "100%",
+                            marginBottom: "10px",
+                            background: "#777",
+                            fontWeight: 500,
+                            ...props.style,
+                          }}
+                          {...props}
+                        >
+                          {props?.options.map((o) => {
+                            return (
+                              <option value={o.value} className="select-option">
+                                &nbsp;&nbsp;{o.value}
+                              </option>
+                            );
                           })}
-                        {...(!(
-                          props?.type === "file" &&
-                          props?.style?.display === "none"
-                        ) && { value: value })}
-                        {...props}
-                      ></textarea>
+                        </select>
+                      </div>
                     ) : (
-                      <input
-                        className="input"
-                        register={register}
-                        errors={errors}
-                        onChange={(e) => {
-                          onChange(e);
-                          props?.onChangeHandler && props?.onChangeHandler(e);
-                        }}
-                        {...(props?.type === "file" &&
-                          props?.style?.display === "none" && {
-                            icon: icon || value,
-                          })}
-                        {...(!(
-                          props?.type === "file" &&
-                          props?.style?.display === "none"
-                        ) && { value: value })}
-                        {...props}
-                      />
+                      <>
+                        <div className={props?.type === "checkbox" && "checkbox"}>
+                          <label className={props?.type === "checkbox" ? "o2 input-label" : "input-label"}> {props.label} </label>
+                          <input
+                            className={props?.type === "checkbox" ? "o1 input" : "input"}
+                            register={register}
+                            errors={errors}
+                            onChange={(e) => {
+                              onChange(e);
+                              props?.onChangeHandler &&
+                                props?.onChangeHandler(e);
+                            }}
+                            {...(props?.type === "file" &&
+                              props?.style?.display === "none" && {
+                                icon: icon || value,
+                              })}
+                            {...(!(
+                              props?.type === "file" &&
+                              props?.style?.display === "none"
+                            ) && { value: value })}
+                            {...props}
+                          />
+                        </div>
+                      </>
                     )}
                   </div>
                 );
@@ -112,11 +191,14 @@ export const Form = ({
           </div>
         </div>
       )}
-            {formType === "contact" && (
+      {formType === "contact" && (
         <div className="row justify-content-around align-items-center">
           <div className="col-md-12">
             <div className="d-flex justify-content-start align-items-center ">
-              <p className="text-left m-l-5">Accept <span className="color-primary">Terms Of Services </span>And <span className="color-primary">privacy policy</span></p>
+              <p className="text-left m-l-5">
+                Accept <span className="color-primary">Terms Of Services </span>
+                And <span className="color-primary">privacy policy</span>
+              </p>
             </div>
           </div>
         </div>

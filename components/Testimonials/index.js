@@ -11,7 +11,6 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 });
 
 const Testimonials = () => {
-
   const options = {
     margin: 10,
     responsiveClass: true,
@@ -21,24 +20,62 @@ const Testimonials = () => {
     smartSpeed: 1000,
     items: 1,
     responsive: {
-        0: {
-            items: 1,
-        },
-        400: {
-            items: 1,
-        },
-        600: {
-            items: 1,
-        },
-        700: {
-            items: 1,
-        },
-        1000: {
-            items: 1,
-
-        }
+      0: {
+        items: 1,
+      },
+      400: {
+        items: 1,
+      },
+      600: {
+        items: 1,
+      },
+      700: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      },
     },
-};
+  };
+
+  const data = [
+    {
+      name: "Frank Serbian",
+      designation: "Web Designer",
+      description: `
+    Which is the same as saying through shrinking from
+    toil and pain is cases are perfectly simple and easy
+    to distinguish in a free hour whenour power of choice
+    is untrammelled and when nothing.`,
+    },
+    {
+      name: "Ash Wednesday",
+      designation: "Web Designer",
+      description: `
+    Which is the same as saying through shrinking from
+    toil and pain is cases are perfectly simple and easy
+    to distinguish in a free hour whenour power of choice
+    is untrammelled and when nothing.`,
+    },
+    {
+      name: "Graham Cracker",
+      designation: "Founder",
+      description: `
+    Which is the same as saying through shrinking from
+    toil and pain is cases are perfectly simple and easy
+    to distinguish in a free hour whenour power of choice
+    is untrammelled and when nothing.`,
+    },
+    {
+      name: "Graham Cracker",
+      designation: "Founder",
+      description: `
+    Which is the same as saying through shrinking from
+    toil and pain is cases are perfectly simple and easy
+    to distinguish in a free hour whenour power of choice
+    is untrammelled and when nothing.`,
+    },
+  ];
 
   return (
     <>
@@ -84,103 +121,33 @@ const Testimonials = () => {
                     id quod maxime placeat facere.
                   </p>
                 </div>
-                  <OwlCarousel
-                    className="owl-theme"
-                    {...options}
-                  >
-                    <div className="testimonials-item">
-                      <div className="testimonials-client d-flex align-items-center">
-                        <img
-                          src="./assets/images/testimonials/testimonials-img-4.svg"
-                          alt="testimonials"
-                        />
-                        <div className="testimonials-text">
-                          <h3>Frank Serbian</h3>
-                          <p>Web Designer</p>
+                <OwlCarousel className="owl-theme" {...options}>
+                  {data?.map((user) => {
+                    return (
+                      <div className="testimonials-item">
+                        <div className="testimonials-client d-flex align-items-center">
+                          <img
+                            src="./assets/images/testimonials/testimonials-img-4.svg"
+                            alt="testimonials"
+                          />
+                          <div className="testimonials-text">
+                            <h3>{user?.name}</h3>
+                            <p>{user?.designation}</p>
+                          </div>
+                        </div>
+                        <div className="testimonials-card testimonials-card-two">
+                          <div className="quote-icon">
+                            <img
+                              src="./assets/images/quote-two.svg"
+                              alt="quote"
+                            />
+                          </div>
+                          <p>{user?.description}</p>
                         </div>
                       </div>
-                      <div className="testimonials-card testimonials-card-two">
-                        <div className="quote-icon">
-                          <img src="./assets/images/quote-two.svg" alt="quote" />
-                        </div>
-                        <p>
-                          Which is the same as saying through shrinking from
-                          toil and pain is cases are perfectly simple and easy
-                          to distinguish in a free hour whenour power of choice
-                          is untrammelled and when nothing.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="testimonials-item">
-                      <div className="testimonials-client d-flex align-items-center">
-                        <img
-                           src="./assets/images/testimonials/testimonials-img-4.svg"
-                          alt="testimonials"
-                        />
-                        <div className="testimonials-text">
-                          <h3>Ash Wednesday</h3>
-                          <p>Web Developer</p>
-                        </div>
-                      </div>
-                      <div className="testimonials-card testimonials-card-two">
-                        <div className="quote-icon">
-                          <img src="./assets/images/quote-two.svg" alt="quote" />
-                        </div>
-                        <p>
-                          Which is the same as saying through shrinking from
-                          toil and pain is cases are perfectly simple and easy
-                          to distinguish in a free hour whenour power of choice
-                          is untrammelled and when nothing.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="testimonials-item">
-                      <div className="testimonials-client d-flex align-items-center">
-                        <img
-                           src="./assets/images/testimonials/testimonials-img-4.svg"
-                          alt="testimonials"
-                        />
-                        <div className="testimonials-text">
-                          <h3>Graham Cracker</h3>
-                          <p>Founder</p>
-                        </div>
-                      </div>
-                      <div className="testimonials-card testimonials-card-two">
-                        <div className="quote-icon">
-                          <img src="./assets/images/quote-two.svg" alt="quote" />
-                        </div>
-                        <p>
-                          Which is the same as saying through shrinking from
-                          toil and pain is cases are perfectly simple and easy
-                          to distinguish in a free hour whenour power of choice
-                          is untrammelled and when nothing.
-                        </p>
-                      </div>
-                    </div>
-                    <div className="testimonials-item">
-                      <div className="testimonials-client d-flex align-items-center">
-                        <img
-                           src="./assets/images/testimonials/testimonials-img-4.svg"
-                          alt="testimonials"
-                        />
-                        <div className="testimonials-text">
-                          <h3>Graham Cracker</h3>
-                          <p>Founder</p>
-                        </div>
-                      </div>
-                      <div className="testimonials-card testimonials-card-two">
-                        <div className="quote-icon">
-                          <img src="./assets/images/quote-two.svg" alt="quote" />
-                        </div>
-                        <p>
-                          Which is the same as saying through shrinking from
-                          toil and pain is cases are perfectly simple and easy
-                          to distinguish in a free hour whenour power of choice
-                          is untrammelled and when nothing.
-                        </p>
-                      </div>
-                    </div>
-                  </OwlCarousel>
+                    );
+                  })}
+                </OwlCarousel>
               </div>
             </div>
           </div>

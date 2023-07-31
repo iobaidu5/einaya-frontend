@@ -1,10 +1,9 @@
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import Script from "next/script";
-import { AppWrapper } from "/context";
-import { getSession, useCustomTheme } from "/customHooks";
 import Main from ".";
 import { Layout } from "/layouts";
+import { Provider } from "react-redux";
 // import { Jost } from "next/font/google";
 
 // const jost = Jost({
@@ -14,12 +13,13 @@ import { Layout } from "/layouts";
 
 import "../styles/styles.scss";
 import "../styles/globals.css";
+import store from "../redux/store";
 
 function App({ Component, pageProps: { session, ...pageProps } }) {
   // const { theme } = useCustomTheme();
 
   return (
-    <AppWrapper>
+    <>
       <Head>
         <link
           rel="stylesheet"
@@ -43,6 +43,7 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon" />
         <link
           href="https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;600;700;800;900&display=swap"
           rel="stylesheet"
@@ -80,12 +81,14 @@ function App({ Component, pageProps: { session, ...pageProps } }) {
         crossOrigin="anonymous"
         referrerPolicy="no-referrer"
       ></Script>
-      <Layout>
-        <main>
-          <Component {...pageProps} />
-        </main>
-      </Layout>
-    </AppWrapper>
+      <Provider store={store}>
+        <Layout>
+          <main>
+            <Component {...pageProps} />
+          </main>
+        </Layout>
+      </Provider>
+    </>
   );
 }
 

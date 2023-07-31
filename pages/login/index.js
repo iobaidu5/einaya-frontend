@@ -1,18 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { useForm, Form } from "../../genericComponents";
 import Link from "next/link";
+import { useRouter } from 'next/router'
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { showLoading, hideLoading } from "../../redux/features/alertSlice";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Spinner from "../../genericComponents/Spinner";
 
 const Login = () => {
   const { getFormValues, setFormValues, ...others } = useForm();
   const [invalidFormat, setInvalidFormat] = useState(false);
+  const router = useRouter();
+  const dispatch = useDispatch();
+
 
   useEffect(() => {
     var nav = document.getElementById("navbarNav");
     var nav2 = document.getElementById("nav-2");
     var btn = document.getElementById("navbarBtn");
-    nav.classList.remove("show");
-    btn.classList.add("collapsed");
-    nav2.classList.remove("active")
+    nav?.classList?.remove("show");
+    btn?.classList?.add("collapsed");
+    nav2?.classList?.remove("active")
   }, [])
 
   var fieldsData = [
@@ -22,7 +32,7 @@ const Login = () => {
       type: "email",
       placeholder: "E-mail",
       required: true,
-      className: "input",
+      className: "input-white",
       gridStyle: { xs: 12 },
     },
     {
@@ -31,15 +41,66 @@ const Login = () => {
       type: "password",
       placeholder: "Password",
       required: true,
-      className: "input",
+      className: "input-white",
       gridStyle: { xs: 12 },
     },
   ];
 
-  const submitHandler = () => {
-
+  const submitHandler = async (values) => {
+    dispatch(showLoading())
+    try{
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/api/v1/users/login`, values);
+      console.log("resss ", res)
+      if(res.data.success){
+        dispatch(hideLoading())
+        localStorage.setItem("token", res?.data?.token);
+        toast.success("Login Successfully!", {
+          position: "top-right",
+          autoClose: 500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        console.log("user a home ", res.data.role)
+        if(res?.data?.role === "user"){
+          window.location.href = "/home"
+        }else if (res?.data?.role === "admin")  {
+          window.location.href = "admin/home"
+        } else {
+          window.location.href = "doctor/home"
+        }
+        
+        //window.location.href = "/home"; // refresh page
+      } else {
+       dispatch(hideLoading())
+        toast.error(res?.data?.message, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        })
+      }
+    } catch (e) {
+      dispatch(hideLoading())
+      toast.error(e.toString().split(":")[1], {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      })
+    }
   };
-
 
 
   return (
@@ -80,6 +141,8 @@ const Login = () => {
           </div>
         </div>
       </section>
+      <ToastContainer />
+      <Spinner />
     </>
   );
 };

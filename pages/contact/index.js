@@ -1,19 +1,28 @@
 import React, { useState, useEffect } from "react";
 import { useForm, Form } from "../../genericComponents";
 import Link from "next/link";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import { withAuth } from '../../customHooks/withAuth';
 
 const Contact = () => {
   const { getFormValues, setFormValues, ...others } = useForm();
   const [invalidFormat, setInvalidFormat] = useState(false);
+  const { user } = useSelector((state) => state.user);
+  const router = useRouter();
 
   useEffect(() => {
     var nav = document.getElementById("navbarNav");
     var nav2 = document.getElementById("nav-2");
     var btn = document.getElementById("navbarBtn");
-    nav.classList.remove("show");
-    btn.classList.add("collapsed");
-    nav2.classList.remove("active")
+    nav?.classList?.remove("show");
+    btn?.classList?.add("collapsed");
+    nav2?.classList?.remove("active")
   }, [])
+
+ 
+
 
   var fieldsData = [
     {
@@ -173,4 +182,5 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+//export default Contact;
+export default withAuth(Contact, ['user']);

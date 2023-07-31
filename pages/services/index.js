@@ -1,16 +1,24 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
-
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
+import { ToastContainer, toast } from "react-toastify";
+import { withAuth } from '../../customHooks/withAuth';
 
 const Services = () => {
+  const { user } = useSelector((state) => state.user);
+
+
   useEffect(() => {
     var nav = document.getElementById("navbarNav");
     var nav2 = document.getElementById("nav-2");
     var btn = document.getElementById("navbarBtn");
-    nav.classList.remove("show");
-    btn.classList.add("collapsed");
-    nav2.classList.remove("active");
+    nav?.classList?.remove("show");
+    btn?.classList?.add("collapsed");
+    nav2?.classList?.remove("active");
   }, [])
+
+  
   return (
     <>
             <div className="page-banner-area">
@@ -320,4 +328,6 @@ const Services = () => {
   );
 };
 
-export default Services;
+//export default Services;
+
+export default withAuth(Services, ['user']);

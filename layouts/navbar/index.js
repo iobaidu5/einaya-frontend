@@ -1,14 +1,20 @@
 import React, { useState, useEffect } from "react";
-
-// import { PRIMARY_COLOR, SECONDARY_COLOR } from "../../styles/constants";
-// import { postAPI, retrieveAPI } from "/httpServices";
-// import { getSession } from "/customHooks/useSession";
 import { useRouter } from "next/dist/client/router";
 import Link from "next/link";
 import $ from "jquery";
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useDispatch, useSelector } from "react-redux";
+import { setUser } from "../../redux/features/userSlice";
+import { setActiveTabId } from "../../redux/features/tabSlice";
+import Spinner from "../../genericComponents/Spinner";
 
 export const Navbar = () => {
   const [search, showSearch] = useState(false);
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
+  const router = useRouter();
 
   useEffect(() => {
     $(window).on("scroll", function () {
@@ -18,101 +24,80 @@ export const Navbar = () => {
         $(".navbar-area").removeClass("is-sticky");
       }
     });
-
-    //   ! function($) {
-    //     "use strict";
-    //     $.fn.meanmenu = function(e) {
-    //         var n = {
-    //             meanMenuTarget: $(this),
-    //             meanMenuContainer: ".main-responsive-menu",
-    //             meanMenuClose: "X",
-    //             meanMenuCloseSize: "18px",
-    //             meanMenuOpen: "<span /><span /><span />",
-    //             meanRevealPosition: "right",
-    //             meanRevealPositionDistance: "0",
-    //             meanRevealColour: "",
-    //             meanScreenWidth: "480",
-    //             meanNavPush: "",
-    //             meanShowChildren: !0,
-    //             meanExpandableChildren: !0,
-    //             meanExpand: "+",
-    //             meanContract: "-",
-    //             meanRemoveAttrs: !1,
-    //             onePage: !1,
-    //             meanDisplay: "block",
-    //             removeElements: ""
-    //         };
-    //         e = $.extend(n, e);
-    //         var a = window.innerWidth || document.documentElement.clientWidth;
-    //         return this.each(function() {
-    //             var n = e.meanMenuTarget,
-    //                 t = e.meanMenuContainer,
-    //                 r = e.meanMenuClose,
-    //                 i = e.meanMenuCloseSize,
-    //                 s = e.meanMenuOpen,
-    //                 u = e.meanRevealPosition,
-    //                 m = e.meanRevealPositionDistance,
-    //                 l = e.meanRevealColour,
-    //                 o = e.meanScreenWidth,
-    //                 c = e.meanNavPush,
-    //                 v = ".meanmenu-reveal",
-    //                 h = e.meanShowChildren,
-    //                 d = e.meanExpandableChildren,
-    //                 y = e.meanExpand,
-    //                 j = e.meanContract,
-    //                 Q = e.meanRemoveAttrs,
-    //                 f = e.onePage,
-    //                 g = e.meanDisplay,
-    //                 p = e.removeElements,
-    //                 C = !1;
-    //             (navigator.userAgent.match(/iPhone/i) || navigator.userAgent.match(/iPod/i) || navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) || navigator.userAgent.match(/Blackberry/i) || navigator.userAgent.match(/Windows Phone/i)) && (C = !0), (navigator.userAgent.match(/MSIE 8/i) || navigator.userAgent.match(/MSIE 7/i)) && $("html").css("overflow-y", "scroll");
-    //             var w = "",
-    //                 x = function() {
-    //                     if ("center" === u) {
-    //                         var e = window.innerWidth || document.documentElement.clientWidth,
-    //                             n = e / 2 - 22 + "px";
-    //                         w = "left:" + n + ";right:auto;", C ? $(".meanmenu-reveal").animate({
-    //                             left: n
-    //                         }) : $(".meanmenu-reveal").css("left", n)
-    //                     }
-    //                 },
-    //                 A = !1,
-    //                 E = !1;
-    //             "right" === u && (w = "right:" + m + ";left:auto;"), "left" === u && (w = "left:" + m + ";right:auto;"), x();
-    //             var M = "",
-    //                 P = function() {
-    //                     M.html($(M).is(".meanmenu-reveal.meanclose") ? r : s)
-    //                 },
-    //                 W = function() {
-    //                     $(".mean-bar,.mean-push").remove(), $(t).removeClass("mean-container"), $(n).css("display", g), A = !1, E = !1, $(p).removeClass("mean-remove")
-    //                 },
-    //                 b = function() {
-    //                     var e = "background:" + l + ";color:" + l + ";" + w;
-    //                     if (o >= a) {
-    //                         $(p).addClass("mean-remove"), E = !0, $(t).addClass("mean-container"), $(".mean-container").prepend('<div class="mean-bar"><a href="#nav" class="meanmenu-reveal" style="' + e + '">Show Navigation</a><nav class="mean-nav"></nav></div>');
-    //                         var r = $(n).html();
-    //                         $(".mean-nav").html(r), Q && $("nav.mean-nav ul, nav.mean-nav ul *").each(function() {
-    //                             $(this).is(".mean-remove") ? $(this).attr("class", "mean-remove") : $(this).removeAttr("class"), $(this).removeAttr("id")
-    //                         }), $(n).before('<div class="mean-push" />'), $(".mean-push").css("margin-top", c), $(n).hide(), $(".meanmenu-reveal").show(), $(v).html(s), M = $(v), $(".mean-nav ul").hide(), h ? d ? ($(".mean-nav ul ul").each(function() {
-    //                             $(this).children().length && $(this, "li:first").parent().append('<a class="mean-expand" href="#" style="font-size: ' + i + '">' + y + "</a>")
-    //                         }), $(".mean-expand").on("click", function(e) {
-    //                             e.preventDefault(), $(this).hasClass("mean-clicked") ? ($(this).text(y), $(this).prev("ul").slideUp(300, function() {})) : ($(this).text(j), $(this).prev("ul").slideDown(300, function() {})), $(this).toggleClass("mean-clicked")
-    //                         })) : $(".mean-nav ul ul").show() : $(".mean-nav ul ul").hide(), $(".mean-nav ul li").last().addClass("mean-last"), M.removeClass("meanclose"), $(M).click(function(e) {
-    //                             e.preventDefault(), A === !1 ? (M.css("text-align", "center"), M.css("text-indent", "0"), M.css("font-size", i), $(".mean-nav ul:first").slideDown(), A = !0) : ($(".mean-nav ul:first").slideUp(), A = !1), M.toggleClass("meanclose"), P(), $(p).addClass("mean-remove")
-    //                         }), f && $(".mean-nav ul > li > a:first-child").on("click", function() {
-    //                             $(".mean-nav ul:first").slideUp(), A = !1, $(M).toggleClass("meanclose").html(s)
-    //                         })
-    //                     } else W()
-    //                 };
-    //             C || $(window).resize(function() {
-    //                 a = window.innerWidth || document.documentElement.clientWidth, a > o, W(), o >= a ? (b(), x()) : W()
-    //             }), $(window).resize(function() {
-    //                 a = window.innerWidth || document.documentElement.clientWidth, C ? (x(), o >= a ? E === !1 && b() : W()) : (W(), o >= a && (b(), x()))
-    //             }), b()
-    //         })
-    //     }
-    // }($);
   });
+
+  const logoutHandler = (e) => {
+    e.preventDefault();
+    localStorage.clear();
+    //router.push("/logout");
+    window.location.href = "/";
+  };
+
+  const handleCardTab = (e) => {
+    e.preventDefault();
+    dispatch(setActiveTabId(3));
+    router.push("/profile");
+  };
+
+  const getUser = async () => {
+    try {
+      const res = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_URL}/api/v1/users/user-data`,
+        {
+          token: localStorage.getItem("token"),
+        },
+        {
+          headers: {
+            "Access-Control-Allow-Origin": "*",
+            "Content-Type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        }
+      );
+      dispatch(setUser(res?.data?.data));
+      if (res.data.success) {
+        // toast.success("Welcome " + res?.data?.data?.user?.firstName, {
+        //   position: "top-right",
+        //   autoClose: 5000,
+        //   hideProgressBar: false,
+        //   closeOnClick: true,
+        //   pauseOnHover: true,
+        //   draggable: true,
+        //   progress: undefined,
+        //   theme: "light",
+        // });
+      } else {
+        toast.error(res?.data?.message, {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+        localStorage.removeItem("token");
+        router.push("/login");
+      }
+    } catch (e) {
+      // toast.error("Invalid email or password", {
+      //   position: "top-right",
+      //   autoClose: 5000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      //   theme: "light",
+      // });
+    }
+  };
+
+  useEffect(() => {
+    getUser();
+
+  }, []);
 
   const handleSearch = () => {
     showSearch(!search);
@@ -198,7 +183,7 @@ export const Navbar = () => {
                   />
                 </Link>
                 <button
-                  class="navbar-toggler"
+                  className="navbar-toggler"
                   type="button"
                   id="navbarBtn"
                   data-bs-toggle="collapse"
@@ -207,8 +192,8 @@ export const Navbar = () => {
                   aria-expanded="false"
                   aria-label="Toggle navigation"
                 >
-                  {/* <span class="navbar-toggler-icon"></span> */}
-                  <i class='bx bx-menu-alt-right'></i>
+                  {/* <span className="navbar-toggler-icon"></span> */}
+                  <i className="bx bx-menu-alt-right"></i>
                 </button>
                 <div
                   className="collapse navbar-collapse mean-menu"
@@ -243,8 +228,101 @@ export const Navbar = () => {
                       </button>
                     </div>
                     <div className="option-item">
-                      <Link href="/login" passHref>
-                        <span className="default-btn btn-style-2">Log in</span>
+                      <Link
+                        href={localStorage.getItem("token") ? "#" : "/login"}
+                        passHref
+                      >
+                        {localStorage.getItem("token") ? (
+                          <div className="dropdown">
+                            <button
+                              className="default-btn btn-style-4 dropdown-toggle"
+                              type="button"
+                              id="dropdownMenuButton1"
+                              data-bs-toggle="dropdown"
+                              aria-expanded="false"
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "space-around",
+                              }}
+                            >
+                              <img
+                                src={`${process.env.NEXT_PUBLIC_API_URL}/${user?.user?.user?.image}`}
+                                className="user-image"
+                                alt="User"
+                              />
+                              <span>{user?.user?.user?.firstName || ""}</span>
+                            </button>
+                            <ul
+                              className="dropdown-menu mt-2"
+                              aria-labelledby="dropdownMenuButton1"
+                            >
+                              <li>
+                                <Link
+                                  className="nav-link py-2 px-2 color-grey"
+                                  href="/profile"
+                                  passHref
+                                >
+                                  <span className="dropdown-item nav-link py-2 px-2">
+                                    {" "}
+                                    My Profile
+                                  </span>
+                                </Link>
+                              </li>
+                              <li>
+                                <span
+                                  className="dropdown-item nav-link py-2 px-2 color-grey"
+                                  onClick={handleCardTab}
+                                >
+                                  {" "}
+                                  {/* <Link href="" passHref> */}
+                                  My Card
+                                  {/* </Link> */}
+                                </span>
+                              </li>
+                              <li>
+                                <Link href="" passHref className="color-grey">
+                                  <span className="dropdown-item nav-link py-2 px-2">
+                                    {" "}
+                                    Term & Conditions
+                                  </span>
+                                </Link>
+                              </li>
+                              <li>
+                                <Link href="" passHref className="color-grey">
+                                  <span className="dropdown-item nav-link py-2 px-2">
+                                    {" "}
+                                    Privacy Policy
+                                  </span>
+                                </Link>
+                              </li>
+                              <li>
+                                <span
+                                  className="dropdown-item nav-link py-2 px-2"
+                                  style={{ color: "#DF0000" }}
+                                >
+                                  <button
+                                    className="nav-link py-0 px-0"
+                                    type="button"
+                                    onClick={logoutHandler}
+                                    style={{
+                                      color: "#DF0000",
+                                      border: "none",
+                                      outline: "none",
+                                      background: "transparent",
+                                    }}
+                                  >
+                                    Logout
+                                  </button>
+                                </span>
+                              </li>
+                            </ul>
+                          </div>
+                        ) : (
+                          <span className="default-btn btn-style-2">
+                            Log in
+                          </span>
+                        )}
                       </Link>
                     </div>
                   </div>
@@ -265,9 +343,11 @@ export const Navbar = () => {
                 <div className="option-inner">
                   <div className="others-options d-flex align-items-center">
                     <div className="option-item">
-                      <button  className="searchbtn"
+                      <button
+                        className="searchbtn"
                         type="button"
-                        onClick={handleSearch}>
+                        onClick={handleSearch}
+                      >
                         <i className="bx bx-search"></i>
                       </button>
                     </div>
@@ -301,6 +381,8 @@ export const Navbar = () => {
           </div>
         </div>
       )}
+      <ToastContainer />
+      <Spinner />
     </>
   );
 };

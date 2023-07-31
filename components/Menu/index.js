@@ -1,6 +1,17 @@
 import React from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { setDoctor, showSidebar } from "../../redux/features/doctorSlice";
 
 const Menu = () => {
+  const dispatch = useDispatch();
+
+const selectDoctorHandler = (value) => {
+  console.log("doctor selected 2", value)
+  dispatch(setDoctor(value))
+  dispatch(showSidebar(true))
+}
+
+
   const appointments = [
     {
       logo: "/assets/images/appointment/cardialogist.svg",
@@ -8,7 +19,7 @@ const Menu = () => {
     },
     {
       logo: "/assets/images/appointment/dental.svg",
-      title: "Dental",
+      title: "Dentist",
     },
     {
       logo: "/assets/images/appointment/gastroenterologist.svg",
@@ -45,7 +56,7 @@ const Menu = () => {
         <div className="row">
           {appointments.map((appointment, index) => {
             return (
-              <div className="col-md-4 col-sm-6" key={index}>
+              <div className="col-md-4 col-sm-6" key={index} onClick={() => selectDoctorHandler(appointment?.title)}>
                 <div className="appointment_box">
                   <div className="appointment_box-icon">
                     <img

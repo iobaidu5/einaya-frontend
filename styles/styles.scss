@@ -1,5 +1,5 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap");
 
 * {
     margin: 0;
@@ -388,8 +388,9 @@ Start NavBer Css
                 .option-item {
                     .default-btn {
                         &.btn-style-2 {
-                            color: var(--whiteColor);
-                            background-color: #009C9D !important;
+                            width: 160px;
+                            color: var(--whiteColor) !important;
+                            background-color: #009C9D;
                         }
                     }
                 }
@@ -754,7 +755,8 @@ Start NavBer Css
                     }
                 }
                 .default-btn {
-                    padding: 13px 28px;
+                    font-family: "Jost" !important;
+                    padding: 10px 25px;
                     font-size: 18px;
                     background-color: var(--mainColor) !important;
                     background-image: none;
@@ -1403,7 +1405,7 @@ End NavBer Responsive Css
 }
 
 .active {
-    text-decoration-line: underline;
+    // text-decoration-line: underline;
     color: #51CB20;
     font-weight: 600;
 }
@@ -1529,6 +1531,7 @@ End NavBer Responsive Css
 }
 
 .default-btn {
+    font-family: "Jost" !important;
     background-image: var(--color-primary);
     color: var(--whiteColor);
     display: flex;
@@ -1559,12 +1562,18 @@ End NavBer Responsive Css
         visibility: hidden;
     }
     &.btn-style-2 {
-        background: linear-gradient(265.63deg, #0077B6 -16.55%, #51CB20 114.1%) !important;
+        background: linear-gradient(265.63deg, #0077B6 -16.55%, #51CB20 114.1%);
         border-radius: 50px;
         transition: var(--transition);
     }
     &.btn-style-3 {
         background: linear-gradient(180deg, #2DC685 0%, #2CB9A4 100%);
+        transition: var(--transition);
+    }
+
+    &.btn-style-4 {
+        background: linear-gradient(265.63deg, #0077B6 -16.55%, #51CB20 114.1%) !important;
+        border-radius: 50px;
         transition: var(--transition);
     }
     &:hover {
@@ -6398,6 +6407,12 @@ Start Go Top CSS
         border-radius: 30px;
         padding: 10px;
         margin-bottom: 20px;
+        transition: var(--transition);
+
+        &:hover{
+            transform: scale(1.1);
+            cursor: pointer;
+        }
 
         &-icon{
             display: flex;
@@ -6684,6 +6699,418 @@ Start Go Top CSS
         }
     }
 }
+
+.spinner body{
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+}
+
+.spinner-bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.react-calendar {
+    width: 90% !important;
+    background: transparent !important;
+    border: none !important;
+    font-family: 'Jost' !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+    font-size: 16px !important;
+}
+
+.time-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+
+    &-inside{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+  }
+  
+  .time-option {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 20px 10px;
+    margin: 10px 0;
+    width: 90%;
+    text-align: center;
+
+    &--time{
+        font-family: 'Jost' !important;
+        color: #0077B6;
+        font-size: 18px;
+        font-family: Jost;
+        font-weight: 600;
+        line-height: 30px;
+        word-wrap: break-word;
+        display: block;
+    }
+
+    &--availability{
+        font-family: 'Jost' !important;
+        color: #1A1A1A;
+        font-size: 16px;
+        font-family: Jost;
+        font-weight: 500;
+        word-wrap: break-word;
+        display: block;
+    }
+  }
+  
+  .time-option input[type="radio"] {
+    display: none;
+  }
+  
+  .time-option label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .time-option input[type="radio"]:checked + label {
+    border-radius: 20px;
+    padding: 20px 10px;
+    margin: 10px 0;
+    width: 90%;
+    background-color: #007bff !important;
+    color: #fff;
+  }
+
+  .time-option input[type="radio"]:checked + label {
+    border-radius: 20px;
+    padding: 20px 10px;
+    margin: 10px 0;
+    width: 90%;
+    background-color: #007bff !important;
+    color: #fff;
+  }
+  
+  .time-option.selected label {
+    background-color: #007bff !important;
+    color: #fff !important;
+    border-radius: 20px;
+    padding: 20px 10px;
+    margin: 10px 0
+  }
+  
+  .selected{
+    background-color: #0077B6 !important;
+    color: #fff !important;
+    border-radius: 20px;
+    padding: 20px 10px;
+    margin: 10px 0
+  }
+
+  .selected .time-option--time{
+    color: #fff !important;
+  }
+
+  .selected .time-option--availability{
+    color: #fff !important;
+  }
+
+// .spinner{
+
+//     &-bg{
+//         filter: blur(8px);
+//         -webkit-filter: blur(8px);
+//     }
+// }
+
+.dropdown-toggle::after{
+    display: none !important;
+  }
+
+  .user-image{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+  }
+
+  .dropdownitem{
+    font-family: 'Jost' !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 26px !important;
+    display: flex;
+    align-items: center;
+    color: #555 !important;
+  }
+
+  a{
+    color: #555;
+  }
+
+.color-grey{
+    color: #555 !important;
+}
+
+  .color-red{
+    color: #DF0000 !important;
+  }
+
+  .transparent-btn{
+    border-radius: 50px;
+    transition: var(--transition);
+    border: 1px solid var(--color-primary-light);
+    border-radius: 30px;
+    background-image: none;
+    color: var(--mainColor);
+    margin-left: 26px;
+    font-family: var(--fontFamily);
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 11px 28px;
+    background-color: transparent;
+    font-size: 20px;
+    width: 100%;
+    font-weight: 500;
+
+    &--red{
+        border: 2px solid #D60000;
+        color: #D60000; 
+        font-weight: 600;
+    }
+  }
+
+  .white-btn{
+    border-radius: 50px;
+    transition: var(--transition);
+    border: 1px solid #fff;
+    border-radius: 30px;
+    background-image: none;
+    color: var(--mainColor);
+    margin-left: 26px;
+    font-family: var(--fontFamily);
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 11px 28px;
+    background-color: #fff;
+    font-size: 20px;
+    width: 100%;
+    font-weight: 500;
+  }
+
+  .available{
+    background: linear-gradient(265.63deg, #0077B6 -16.55%, #51CB20 114.1%);
+    border-radius: 30px;
+    padding: 10px;
+    margin: 20px 0;
+
+    &_selected{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-top: 5px;
+        margin-bottom: 10px;
+
+        &-content{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border-radius: 20px;
+            padding: 10px;
+            margin: 10px 0;
+            width: 90%;
+            text-align: center;
+
+            &-2{
+                background-color: transparent;
+                padding: 5px;
+                margin: 5px 0;
+                text-align: left; 
+            }
+
+            &--p{
+                font-family: 'Jost' !important;
+                color: #0077B6;
+                font-size: 18px;
+                font-family: Jost;
+                font-weight: 600;
+                line-height: 30px;
+                word-wrap: break-word;
+                display: block;
+            }
+        }
+    }
+
+    &-2{
+        background-color: #fff !important;
+        border-radius: 30px;
+        padding: 10px;
+        margin: 20px 0;
+    }
+
+    &_content{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        &-name{
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 1.4;
+            color: #0077B6;
+        }
+
+        &-icon{
+            color: #0077B6 !important;
+            font-size: 24px !important;
+            padding-right: 4px;
+        }
+
+        &-specialty{
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 23px;
+            display: flex;
+            align-items: center;
+            color: #1A1A1A;
+            padding: 5px 0;
+        }
+
+        &-address{
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 23px;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(265.63deg, #0077B6 -16.55%, #51CB20 114.1%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            padding-top: 7px;
+        }
+
+        &-img{
+            width: 85px;
+            height: 85px;
+            margin-left: 20px;
+            margin-right: 10px;
+        }
+
+        &-title{
+            font-family: 'Jost';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 30px;
+            color: #FFFFFF;  
+        }
+
+        &-btn{
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            border-radius: 50px;
+            transition: var(--transition);
+            border: 1px solid #fff;
+            border-radius: 30px;
+            background-image: none;
+            color: var(--mainColor);
+            font-family: var(--fontFamily);
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+            padding: 11px 28px;
+            background-color: #fff;
+            font-size: 20px;
+            width: 90%;
+            font-weight: 500;
+
+            &-2{
+                background: linear-gradient(265.63deg, #0077B6 -16.55%, #51CB20 114.1%);
+                color: #fff !important;
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+  }
+
+  .color-2{
+    color: #1A1A1A !important;
+  }
+
+  .checkbox{
+    display: flex;
+    gap: 20px !important;
+  }
+
+  .o2{
+    order: 2 !important;
+  }
+
+  .o1{
+    order: 1 !important;
+  }
+
+.notification-length{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #fff;
+    position: absolute;
+    top: -10px;
+    cursor: pointer;
+  }
+
+  .notification-read{
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #1A1A1A;
+    text-align: center;
+    padding: 5px 5px;
+    border: 1px solid #0077B6;
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+
 /* ========================================
 End Footer Area
 ==========================================*/ 
@@ -6962,7 +7389,7 @@ Start Footer Responsive Css
     width: 50px !important;
     height: 50px !important;
     font-size: 30px !important;
-    line-height: 1.9 !important;
+    line-height: 1.0 !important;
     text-align: center !important;
     color: var(--headingColor) !important;
     -webkit-transition: var(--transition) !important;
@@ -6994,7 +7421,7 @@ Start Footer Responsive Css
     width: 50px !important;
     height: 50px !important;
     font-size: 30px !important;
-    line-height: 1.9 !important;
+    line-height: 1.0 !important;
     text-align: center !important;
     color: var(--headingColor) !important;
     -webkit-transition: var(--transition) !important;
@@ -7033,6 +7460,231 @@ Start Footer Responsive Css
     height: 16px;
 }
 
+.offers{
+    padding: 5rem 0;
+
+    &_cards{
+        padding: 3rem 0;
+        border-radius: 20px;
+    }
+
+    &_card2{
+        background: linear-gradient(265.63deg, #0077B6 -16.55%, #51CB20 114.1%) !important;
+        height: 600px;
+        padding: 30px;
+        position: relative;
+        border-radius: 20px;
+    }
+
+    &_card{
+        border-width: 2px;
+        border-style: solid;
+        border-image: linear-gradient(265.63deg, #0077B6 -16.55%, #51CB20 114.1%) 1;
+        height: 600px;
+        padding: 30px;
+        position: relative;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            z-index: 0;
+            border-radius: 10px;
+        }
+
+
+        &-content{
+
+            &--title{
+                font-family: "Jost";
+                color: #1A1A1A;
+                font-size: 48px;
+                font-family: Jost;
+                font-weight: 700;
+                line-height: 57.60px;
+                word-wrap: break-word
+            }
+
+            &--title2{
+                font-family: "Jost";
+                color: #fff;
+                font-size: 48px;
+                font-family: Jost;
+                font-weight: 700;
+                line-height: 57.60px;
+                word-wrap: break-word
+            }
+
+            &--p{
+                font-family: "Jost";
+                color: #1A1A1A;
+                font-size: 16px;
+                font-family: Jost;
+                font-weight: 500;
+                line-height: 1.9;
+                word-wrap: break-word;
+                padding-top: 20px;
+            }
+
+            &--p2{
+                font-family: "Jost";
+                color: #fff;
+                font-size: 16px;
+                font-family: Jost;
+                font-weight: 500;
+                line-height: 1.9;
+                word-wrap: break-word;
+                padding-top: 20px;
+            }
+
+            &--price{
+                background: linear-gradient(265.63deg, #0077B6 -16.55%, #51CB20 114.1%);
+                -webkit-background-clip: text; /* For Safari/Chrome */
+                -moz-background-clip: text; /* For Firefox */
+                background-clip: text;
+                color: transparent;
+            }
+
+            &--price2{
+                color: #fff !important;
+            }
+
+            &--persons2{
+                color: #fff !important;
+            }
+
+            &--btn{
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+            }
+
+            &--btn2{
+                position: absolute;
+                bottom: 20px;
+                left: 0;
+                right: 0;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                margin: 0 auto;
+                background-color: transparent !important;
+                background: transparent !important;
+                border: 1px solid #fff !important;
+                color: #fff !important;
+            }
+
+            &--btn3{
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                margin: 25px auto;
+                background-color: transparent !important;
+                background: transparent !important;
+                border: 1px solid #51CB20 !important;
+                color: #51CB20 !important;
+
+                &:hover{
+                    color: #fff !important;
+                    border: 1px solid #fff !important;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.h-500{
+    width: 90% !important;
+    height: 550px !important;
+    padding: 40px !important;
+}
+
+.request{
+    background-image: url("../public/assets/images/banner/banner-2-img-3.webp");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    padding: 7rem 0;
+    padding-top: 14rem;
+    background-color: #f7f7f7;
+    
+    
+    &_content{
+        background: #FFFFFF;
+        border-radius: 30px;
+        width: 100%;
+        height: 100%;
+        padding: 40px 80px;
+    }
+
+    &_content2{
+        background: #FFFFFF;
+        border-radius: 30px;
+        width: 60%;
+        height: 100%;
+        padding: 40px 80px;
+        margin: 0 auto;
+    }
+
+    &_details{
+
+        &-hr{
+            width: 90%;
+            margin: 30px 0;
+        }
+
+        &-title{
+
+        }
+    }
+
+    &_success{
+
+        &-img{
+            display: flex;
+            justify-content: center;
+            margin: 0 auto;
+            width: 204px;
+            max-width: 100%;
+            height: 204px;
+        }
+
+        &-title{
+            font-family: "Jost";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #000000;
+            text-align: center !important;
+        }
+
+        &-p{
+            font-family: "Jost";
+            color: #777;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 1.7;
+            word-wrap: break-word;
+            text-align: center;
+            margin-bottom: 10px;
+
+        }
+    }
+}
+
 .login{
     background-image: url("../public/assets/images/banner/banner-2-img-3.webp");
     background-position: right center;
@@ -7055,10 +7707,44 @@ Start Footer Responsive Css
         border-radius: 30px;
         width: 600px;
         height: 100%;
-        padding: 40px 0;
+        padding: 40px 20px;
         @media only screen and (max-width: 768px) {
             width: 100%;
             max-width: 100%;
+        }
+
+        &-2{
+            width: 80%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 30px;
+            height: 100%;
+            padding: 40px 20px;
+            @media only screen and (max-width: 768px) {
+                width: 100%;
+                max-width: 100%;
+            } 
+        }
+
+        &-3{
+            width: 40%; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            background: #FFFFFF;
+            border-radius: 30px;
+            height: 100%;
+            padding: 40px 20px;
+            @media only screen and (max-width: 768px) {
+                width: 100%;
+                max-width: 100%;
+            } 
         }
 
         &-content{
@@ -7082,6 +7768,7 @@ Start Footer Responsive Css
         }
 
         &-form{
+            width: 100%;
             padding: 10px 0;
         }
     }
@@ -7102,7 +7789,13 @@ Start Footer Responsive Css
     }
 }
 
+input,
+input::-webkit-input-placeholder {
+    font-size: 16px;
+}
+
 .input{
+    position: relative;
     display: flex;
     justify-content: center;
     margin: 10px auto;
@@ -7111,15 +7804,36 @@ Start Footer Responsive Css
     max-width: 100%;
     height: 54px;
     background: #F7F7F7;
-    border: 1px solid #F7F7F7;
+    border: 1px solid var(--color-primary-light);
     border-radius: 30px;
     font-family: "Jost";
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 23px;
     color: #777777;
     transition: var(--transition);
+
+    &-2{
+        display: flex;
+        justify-content: center;
+        margin: 10px auto;
+        padding: 10px 16px;
+        width: 95%;
+        max-width: 100%;
+        height: 54px;
+        background: #F7F7F7;
+        border-radius: 20px;
+        font-family: "Jost";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 23px;
+        color: #777777;
+        transition: var(--transition);
+        border: none !important;
+        outline: none !important;
+    }
 
     @media only screen and (max-width: 768px) {
         width: 100%;
@@ -7187,9 +7901,9 @@ Start Footer Responsive Css
     width: 95%;
     max-width: 100%;
     height: 54px;
-    background: #fff;
+    background: #f7f7f7 !important;
     border: 1px solid #fff;
-    border-radius: 30px;
+    border-radius: 10px;
     font-family: "Jost";
     font-style: normal;
     font-weight: 500;
@@ -7197,6 +7911,7 @@ Start Footer Responsive Css
     line-height: 23px;
     color: #777777;
     transition: var(--transition);
+
 
     &::placeholder {
         color: #777777;
@@ -7226,7 +7941,7 @@ Start Footer Responsive Css
 .nav-link {
     font-size: 17px;
     font-family: var(--fontFamily);
-    color: var(--paragraphColor);
+    color: #555;
     font-weight: 500;
     padding-left: 0;
     padding-right: 0;
@@ -7432,6 +8147,21 @@ Start Footer Responsive Css
     color: var(--color-primary-light) !important;
 }
 
+.leading{
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: red;
+    margin-right: 5px;
+}
+
 
 .error{
     padding: 4rem 0;
@@ -7484,6 +8214,32 @@ Start Footer Responsive Css
         }
     }
 }
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Some browsers will not display the caret when using calc, so we put the fallback first */ 
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat 98.5% !important; /* !important used for overriding all other customisations */
+    background: url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") white no-repeat calc(100% - 10px) !important; /* Better placement regardless of input width */
+  
+  &-option{
+    font-family: "Jost";
+    font-style: normal;
+    font-weight: 300 !important;
+    font-size: 16px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #555555;
+    padding: 10px 100px;
+    margin-bottom: 20px;
+  }
+  
+  }
+  /*For IE*/
+  select::-ms-expand { display: none; }
 
 .navbar-right
 {
@@ -7757,6 +8513,24 @@ Start Ripple Animation
 }
 
 .sidebar{
+    overflow-y: scroll;
+    height: 100%;
+
+    /* width */
+&::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  &::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+  }
 
     &_content{
         padding: 80px 40px;
@@ -7782,6 +8556,18 @@ Start Ripple Animation
 
         }
     }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
 
 
@@ -7811,6 +8597,528 @@ Start Ripple Animation
     }
 }
 
+.nav-pills-custom .nav-link {
+    color: #aaa;
+    background: #fff;
+    position: relative;
+}
+
+.nav-pills-custom .nav-link.active {
+    color: #45b649;
+    background: #fff;
+}
+
+
+.section__Jobs-container {
+    margin-top: 10px;
+    max-width: 100%;
+    position: relative;
+  }
+  
+//   .section__Jobs-container span {
+//     font-size: 12px;
+//     z-index: 10;
+//     position: absolute;
+//     top: 0;
+//     left: 15px;
+//     display: inline-block;
+//     width: 2px;
+//     height: 42px;
+//     transition: transform 0.5s;
+//   }
+  
+  .section__Jobs-container span.index1-chosen {
+    transform: translateY(0px);
+  }
+  .section__Jobs-container span.index2-chosen {
+    transform: translateY(42px);
+  }
+  .section__Jobs-container span.index3-chosen {
+    transform: translateY(84px);
+  }
+  
+  .section__Jobs-styledTabList {
+    max-width: 130px;
+  }
+  
+  .section__Jobs-styledTabList {
+    padding: 0;
+  }
+  
+
+  .section__Jobs-styledContent {
+    font-family: sans-serif;
+    text-align: left;
+    color: #8892b0;
+    padding-left: 40px;
+  }
+  
+  .section__Jobs-styledContent h4 {
+    color: #ccd6f6;
+    font-size: 22px;
+    font-weight: 500;
+  }
+  
+  .section__Jobs-styledContent h5 {
+    font-size: 13px;
+    font-family: "Roboto Mono", monospace;
+    letter-spacing: 0.05em;
+    margin-bottom: 30px;
+    color: #64ffda;
+  }
+  
+  .section__Jobs-styledContent p {
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 10px;
+  }
+  
+  .section__Jobs-detail::before {
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    color: #64ffda;
+  }
+  
+
+  .section__Jobs-buttonCompany {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    color: #1A1A1A;
+    border: none;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 263px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+
+  .section__Jobs-buttonCompany-red {
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    color: red !important;
+    border: none;
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    width: 263px;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .section__Jobs-buttonCompany:hover,
+  .section__Jobs-buttonCompany:focus {
+    background-color: #172a45;
+  }
+  
+  .section__Jobs-buttonCompany:hover,
+  .section__Jobs-buttonCompany:active,
+  .section__Jobs-buttonCompany:focus {
+    color: #64ffda;
+    outline: 0px;
+  }
+  
+
+  .card {
+    background-image: url("../public/assets/images/card-bg.png") !important;
+    border-radius: 10px !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    position: relative;
+
+    &_line{
+        display: flex;
+        justify-content: center;
+        border-left: 0.25px solid #b3b3b3;
+        height: 280px;
+        
+    }
+
+    // &::after{
+    //     content: "";
+    //     position: absolute;
+    //     right: -1rem;
+    //     display: block;
+    //     border-top: 300px solid red;
+    //     width: 1px;
+    // }
+  }
+  .card_content {
+    padding: 32px 20px !important;
+  }
+  .card_content-logo--img {
+    display: flex;
+    justify-content: flex-start;
+    width: 96px !important;
+    margin-bottom: 15px !important;
+  }
+  .card_content-data--name {
+    font-family: 'Jost', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 24px !important;
+    line-height: 10px !important;
+    color: #fff !important;
+    text-align: left !important;
+    padding: 10px 0 !important;
+    text-transform: capitalize !important;
+  }
+  .card_content-details {
+    margin-top: 20px !important;
+  }
+  .card_content-details--p {
+    font-family: 'Jost', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 1.9 !important;
+    color: #fff !important;
+  }
+
+  .card_content-details--p2 {
+    font-family: 'Jost', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 16px !important;
+    line-height: 1.9 !important;
+    color: #fff !important;
+  }
+
+
+
+/* Add indicator arrow for the active tab */
+@media (min-width: 992px) {
+    .nav-pills-custom .nav-link::before {
+        content: '';
+        display: block;
+        border-top: 8px solid transparent;
+        border-left: 10px solid #fff;
+        border-bottom: 8px solid transparent;
+        position: absolute;
+        top: 50%;
+        right: -10px;
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+}
+
+.nav-pills-custom .nav-link.active::before {
+    opacity: 1;
+}
+
+.tabs{
+    position: relative;
+    background: #fff;
+    border-radius: 30px;
+    margin-top: -100px;
+    z-index: 100;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+    height: 100%;
+
+    &_content{
+        padding: 60px;
+
+        &-icon{
+            font-size: 24px;
+        }
+    }
+}
+
+.border-right{
+    position: relative;
+    background: #b3b3b3; 
+    height: 110%; 
+    width: 1.5px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+
+    // &::after{
+    //     content:""; 
+    //     background: red; 
+    //     position: absolute; 
+    //     top: 0; 
+    //     right: -10%; 
+    //     height: 100%; 
+    //     width: 1.5px;
+    // }
+}
+
+.profiletab{
+
+    &_image{
+
+        &-img{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #51CB20;
+        }
+    }
+
+    &_content{
+        padding: 20px 0;
+
+        &-p{
+            font-family: 'Jost' !important;
+            font-style: normal !important;
+            font-weight: 700 !important;
+            font-size: 18px !important;
+            display: flex !important;
+            align-items: center !important;
+            color: #1A1A1A !important;
+        }
+
+        &-span{
+            font-family: 'Jost' !important;
+            font-style: normal !important;
+            font-weight: 500 !important;
+            font-size: 16px !important;
+            display: flex !important;
+            align-items: center !important;
+            color: #1A1A1A !important;
+            margin-top: -10px !important;
+        }
+    }
+
+    &_requests{
+        padding-top: 30px;
+
+        &-title{
+            font-family: "Jost" !important;
+            color: #1A1A1A !important;
+            font-size: 20px !important;
+            font-family: Jost !important;
+            font-weight: 500 !important;
+            line-height: 30px !important;
+            word-wrap: break-word !important;
+        }
+
+        &-p{
+            font-family: "Jost" !important;
+            color: #1A1A1A !important;
+            font-size: 16px !important;
+            font-family: Jost !important;
+            font-weight: 500 !important;
+            line-height: 1.4 !important;
+            word-wrap: break-word !important;
+            padding: 20px 0;
+            text-transform: capitalize !important;
+
+            &-blue{
+                font-family: "Jost" !important;
+                color: #0077B6 !important;
+                font-size: 16px !important;
+                font-family: Jost !important;
+                font-weight: 500 !important;
+                line-height: 10px !important;
+                word-wrap: break-word !important;
+                padding: 20px 0;
+                text-transform: capitalize !important;
+            }
+
+            &-green{
+                font-family: "Jost" !important;
+                color: #51CB20 !important;
+                font-size: 16px !important;
+                font-family: Jost !important;
+                font-weight: 500 !important;
+                line-height: 10px !important;
+                word-wrap: break-word !important;
+                padding: 20px 0;
+                text-transform: capitalize !important;
+            }
+
+            &-red{
+                font-family: "Jost" !important;
+                color: #F10000 !important;
+                font-size: 16px !important;
+                font-family: Jost !important;
+                font-weight: 500 !important;
+                line-height: 10px !important;
+                word-wrap: break-word !important;
+                padding: 20px 0;
+                text-transform: capitalize !important;
+            }
+        }
+    }
+}
+
+.logout-tab{
+    color: #F10000 !important;
+}
+
+.tabheader{
+    padding-bottom: 20px;
+    padding-left: 5px;
+
+    &-title{
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 58px;
+        display: flex;
+        align-items: center;
+        color: #1A1A1A;
+    }
+
+    &-icon{
+        font-size: 28px;
+        color: #555;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+}
+
+.input-label{
+    position: relative;
+    font-family: 'Jost';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    color: #1A1A1A;
+    white-space: normal;
+    // margin-left: -50px;
+}
+
+.profileInput{
+    width: 90%;
+}
+
+.profileInput::-webkit-file-upload-button {
+    visibility: hidden;
+  }
+
+  .profileInput::before {
+    content: 'Change Picture';
+    font-family: 'Jost';
+    display: inline-block;
+    background: linear-gradient(265.63deg, #0077B6 -16.55%, #51CB20 114.1%);
+    border-radius: 50px;
+    padding: 11px 28px;
+    font-size: 20px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    color: var(--whiteColor);
+    white-space: nowrap;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+  }
+
+  .profileInput:hover::before {
+    border-color: black;
+  }
+  .profileInput:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+  }
+
+  input[type='radio'] {
+    position: relative;
+    accent-color: green;
+}
+
+input[type=radio]:checked + label:after {
+    border-radius: 11px;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    top: 9px;
+    left: -20.1px;
+    content: " ";
+    display: block;
+    background: var(--color-primary-light);
+  }
+
+  input[type='checkbox'] {
+    position: relative;
+    accent-color: green;
+    margin-top: 10px;
+}
+
+
+  .no-left-padding{
+    padding-left: 0 !important;
+  }
+
+  .plan-modal{
+    width: 80% !important;
+    min-width: 80% !important;
+    max-width: 80% !important;
+    scroll-behavior: smooth;
+  }
+
+  .admin{
+    background-image: url("../public/assets/images/banner/banner-2-img-3.webp");
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    border-radius: 20px !important;
+
+    &_title{
+        font-family: 'Jost' !important;
+        font-style: normal !important;
+        font-weight: 600 !important;
+        font-size: 30px !important;
+        line-height: 30px !important;
+        color: #333 !important;  
+    }
+
+    &_sidebar{
+        background: #F7F7F7 !important;
+        height: 100%;
+        border-radius: 20px !important;
+    }
+
+    &_link{
+        font-family: "Jost" !important;
+        font-style: normal !important;
+        font-weight: 600 !important;
+        font-size: 18px !important;
+        line-height: 29px !important;
+        text-align: center !important; 
+    }
+
+    &_navbar{
+        background: "#eee" !important;
+    }
+  }
+
+// Apply the styles
+.MuiBackdrop {
+  &-root {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+  }
+}
 
 // .mean-container .mean-bar {
 // 	float: left;

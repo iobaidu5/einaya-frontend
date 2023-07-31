@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React from "react"
 
 const Recruitment = () => {
@@ -27,7 +28,10 @@ const Recruitment = () => {
                                     Have Complimentary Lunch Paid Holidays
                                 </li>
                             </ul>
-                            <a href="contact.html" className="default-btn btn-style-2">Contact Us</a>
+                            <Link href="/contact">
+                            <span  className="default-btn btn-style-2">Contact Us</span>
+                            </Link> 
+                            
                         </div>
                     </div>
                     <div className="col-lg-6">
