@@ -76,16 +76,16 @@ const Login = () => {
         //window.location.href = "/home"; // refresh page
       } else {
        dispatch(hideLoading())
-        toast.error(res?.data?.message, {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        })
+        // toast.error(res?.data?.message, {
+        //   position: "top-right",
+        //   autoClose: 5000,
+        //   hideProgressBar: false,
+        //   closeOnClick: true,
+        //   pauseOnHover: true,
+        //   draggable: true,
+        //   progress: undefined,
+        //   theme: "light",
+        // })
       }
     } catch (e) {
       dispatch(hideLoading())
