@@ -7,7 +7,10 @@ import axios from "axios";
 import Link from "next/link";
 
 const Notifications = (props) => {
-  const [notification, setNotifications] = useState([])
+  const [notification, setNotifications] = useState([{
+    type: "test-notification",
+    message: "Profile Created"
+  }])
   const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
@@ -105,29 +108,32 @@ const Notifications = (props) => {
               </div>
             </div>
             <div className="row">
-              {user?.user?.notification.length === 0 ? (
+              {notification.length === 0 ? (
                 <div className="d-flex justify-content-center align-items-center my-auto mx-auto pt-5 mt-5">
                   <p className="profiletab_content-p mx-auto text-center">
                     No New Notificaiton
                   </p>
                 </div>
-              ) : (
+              ) :
+              
+              (
+                <div></div>
                 
-                notification?.map((n) => {
-                  return (
-                    <>
-                      <div className="col-md-4 col-sm-6">
-                        <p className="profiletab_requests-p">{n?.type}</p>
-                      </div>
-                      <div className="col-md-4 col-sm-6">
-                        <p className="profiletab_requests-p">{n?.message}</p>
-                      </div>
-                      <div className="col-md-4 col-sm-6">
-                        <p className="profiletab_requests-p-green">New</p>
-                      </div>
-                    </>
-                  );
-                })
+                // notification?.map((n) => {
+                //   return (
+                //     <>
+                //       <div className="col-md-4 col-sm-6">
+                //         <p className="profiletab_requests-p">{n?.type}</p>
+                //       </div>
+                //       <div className="col-md-4 col-sm-6">
+                //         <p className="profiletab_requests-p">{n?.message}</p>
+                //       </div>
+                //       <div className="col-md-4 col-sm-6">
+                //         <p className="profiletab_requests-p-green">New</p>
+                //       </div>
+                //     </>
+                //   );
+                // })
               )}
             </div>
             <div>
