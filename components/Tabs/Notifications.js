@@ -7,6 +7,7 @@ import axios from "axios";
 import Link from "next/link";
 
 const Notifications = (props) => {
+  const [notification, setNotifications] = useState([])
   const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
@@ -68,6 +69,10 @@ const Notifications = (props) => {
     }
   };
 
+  useEffect(() => {
+    setNotifications(user.user.notification);
+  }, [])
+
   return (
     <>
       <div
@@ -107,7 +112,8 @@ const Notifications = (props) => {
                   </p>
                 </div>
               ) : (
-                user?.user?.notification.map((n) => {
+                
+                notification?.map((n) => {
                   return (
                     <>
                       <div className="col-md-4 col-sm-6">
