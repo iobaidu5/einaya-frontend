@@ -5,6 +5,7 @@ const webpack = require("webpack");
 
 const nextConfig = {
   reactStrictMode: false,
+  output: "export",
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],
   },

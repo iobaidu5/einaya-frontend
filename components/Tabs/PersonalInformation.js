@@ -109,6 +109,7 @@ const PersonalInformation = (props) => {
         disabled: disabled,
         gridStyle: { xs: 12 },
         onChange: (e) => {
+          console.log("location ", e.target.value);
           setState({
             ...state,
             location: e.target.value,
@@ -154,9 +155,7 @@ const PersonalInformation = (props) => {
       language: user?.user?.language,
     });
 
-
-
-  }, [state]);
+  }, []);
 
   return (
     <div

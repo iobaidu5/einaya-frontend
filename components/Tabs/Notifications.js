@@ -7,10 +7,6 @@ import axios from "axios";
 import Link from "next/link";
 
 const Notifications = (props) => {
-  const [notification, setNotifications] = useState([{
-    type: "test-notification",
-    message: "Profile Created"
-  }])
   const { user } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
@@ -72,10 +68,6 @@ const Notifications = (props) => {
     }
   };
 
-  useEffect(() => {
-    setNotifications(user.user.notification);
-  }, [])
-
   return (
     <>
       <div
@@ -108,18 +100,15 @@ const Notifications = (props) => {
               </div>
             </div>
             <div className="row">
-              {notification.length === 0 ? (
+              {user?.user?.notification.length === 0 ? (
                 <div className="d-flex justify-content-center align-items-center my-auto mx-auto pt-5 mt-5">
                   <p className="profiletab_content-p mx-auto text-center">
                     No New Notificaiton
                   </p>
                 </div>
-              ) :
-              
-              (
+              ) : (
                 <div></div>
-                
-                // notification?.map((n) => {
+                // user?.user?.notification.map((n) => {
                 //   return (
                 //     <>
                 //       <div className="col-md-4 col-sm-6">

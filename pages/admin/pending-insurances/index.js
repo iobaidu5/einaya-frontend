@@ -135,7 +135,7 @@ const PendingInsurances = () => {
       },
     {
       label: "Status",
-      name: "status",
+      name: "userId",
       options: {
         filter: true,
         sort: true,
@@ -253,7 +253,7 @@ const PendingInsurances = () => {
   };
 
 
-  const changePendingInsuranceStatus = async (status,userId) => {
+  const changePendingInsuranceStatus = async (status, userId) => {
     try {
       dispatch(showLoading());
       const res = await axios.post(
